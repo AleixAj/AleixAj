@@ -67,8 +67,8 @@ def logo_data(name, size=192):
 
 
 def pill_w(text):
-    # Segoe UI semibold at 14px: about 7.9 px per character, plus the padding
-    return round(len(text) * 7.9 + 28)
+    # Segoe UI semibold at 15px: capitals are wider than the rest, plus the padding
+    return round(sum(10.6 if c.isupper() else 4.6 if c in ' .ijl' else 8.4 for c in text) + 36)
 
 
 def card(p):
@@ -79,9 +79,9 @@ def card(p):
         c, w = TECH[t], pill_w(t)
         tags.append(f'<rect x="{x}" y="236" width="{w}" height="32" rx="16" fill="{c}" fill-opacity=".12" stroke="{c}" stroke-opacity=".45"/>'
                     f'<circle cx="{x + 15}" cy="252" r="3.5" fill="{c}"/>'
-                    f'<text x="{x + 25}" y="257" font-family="{FONT}" font-size="14" font-weight="600" fill="{c}">{escape(t)}</text>')
-        x += w + 10
-    desc = ''.join(f'<text x="32" y="{176 + i * 27}" font-family="{FONT}" font-size="18" fill="#CBD5E1">{escape(l)}</text>' for i, l in enumerate(p['desc']))
+                    f'<text x="{x + 25}" y="257" font-family="{FONT}" font-size="15" font-weight="600" fill="{c}">{escape(t)}</text>')
+        x += w + 9
+    desc = ''.join(f'<text x="32" y="{174 + i * 29}" font-family="{FONT}" font-size="20" fill="#CBD5E1">{escape(l)}</text>' for i, l in enumerate(p['desc']))
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0D1424"/><stop offset="1" stop-color="#070B16"/></linearGradient>
@@ -100,8 +100,8 @@ def card(p):
   <rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="22" fill="none" stroke="{a}" stroke-opacity=".28" stroke-width="1.5"/>
   <rect x="28" y="28" width="96" height="96" rx="20" fill="#0B1222" stroke="{a}" stroke-opacity=".35"/>
   <image x="34" y="34" width="84" height="84" href="{logo_data(p['logo'])}" clip-path="url(#logo)"/>
-  <text x="148" y="76" font-family="{FONT}" font-size="31" font-weight="700" fill="#FFFFFF" letter-spacing="-.5">{escape(p['name'])}</text>
-  <text x="150" y="106" font-family="{MONO}" font-size="12.5" font-weight="600" fill="{a}" letter-spacing="2.4">{escape(p['kind'])}</text>
+  <text x="148" y="74" font-family="{FONT}" font-size="33" font-weight="700" fill="#FFFFFF" letter-spacing="-.5">{escape(p['name'])}</text>
+  <text x="150" y="108" font-family="{MONO}" font-size="15" font-weight="700" fill="{a}" letter-spacing="1.6">{escape(p['kind'])}</text>
   <circle cx="548" cy="58" r="20" fill="{a}" fill-opacity=".12" stroke="{a}" stroke-opacity=".4"/>
   <path d="M541 65l14-14M545 51h10v10" fill="none" stroke="{a}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
   {desc}
