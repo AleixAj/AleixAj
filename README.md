@@ -51,52 +51,21 @@ manos de usuarios reales.
 
 <br>
 
-## Tecnologías
+<img src="assets/stack.svg" width="100%" alt="Tecnologías: JavaScript, TypeScript, PHP, SQL, HTML, CSS · React, Next.js, Svelte, Three.js, Tailwind CSS, Electron · Laravel, Node.js, PostgreSQL, MySQL, Supabase · Git, Vite, Vitest, Cloudflare, Godot, Claude Code">
 
-<p>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=111" alt="JavaScript">
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3">
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="SQL">
-</p>
-<p>
-  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React">
-  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js">
-  <img src="https://img.shields.io/badge/Svelte-FF3E00?style=flat-square&logo=svelte&logoColor=white" alt="Svelte">
-  <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white" alt="Three.js">
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
-  <img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" alt="Electron">
-</p>
-<p>
-  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL">
-  <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase">
-  <img src="https://img.shields.io/badge/Godot-478CBF?style=flat-square&logo=godotengine&logoColor=white" alt="Godot">
-</p>
-<p>
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git">
-  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare">
-  <img src="https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white" alt="Vitest">
-  <img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude Code">
-</p>
+<br><br>
 
-<br>
+<img src="assets/career.svg" width="100%" alt="Trayectoria: proyectos propios (2026 – hoy), Grup Romeu (2025 – 2026), Nemon (2023 – 2025), VIEWNEXT (2019 – 2023), prácticas en C. R. Pantà de Riudecanyes (2018)">
 
-## Trayectoria
+<br><br>
 
-| Periodo | Puesto | Dónde |
-| --- | --- | --- |
-| 2026 – hoy | Desarrollo de producto y formación | Proyectos propios |
-| 2025 – 2026 | Desarrollador de Software (full-stack, PHP y JavaScript) | Grup Romeu |
-| 2023 – 2025 | Desarrollador de Software (PHP, sector energético) | Nemon |
-| 2019 – 2023 | Release Manager y Desarrollador de Software | VIEWNEXT |
+<img src="assets/education.svg" width="100%" alt="Formación: Bootcamp Frontend en Lemoncoders (2025), bootcamps de PHP y Java en Fundació Esplai (2019), CFGS DAW en INS Baix Camp (2015 – 2018), ESO y Bachillerato Tecnológico (2008 – 2014)">
 
-<br>
+<br><br>
 
+<p align="center"><b>¿Hablamos?</b></p>
 <p align="center">
-  <sub>¿Hablamos? Escríbeme a <a href="mailto:aleixauque@gmail.com">aleixauque@gmail.com</a> o por <a href="https://linkedin.com/in/aleixauque/">LinkedIn</a>.</sub>
+  <a href="https://aleixaj.com"><img src="assets/btn-portfolio.svg" alt="Portfolio · aleixaj.com" width="250"></a>
+  <a href="https://linkedin.com/in/aleixauque/"><img src="assets/btn-linkedin.svg" alt="LinkedIn · in/aleixauque" width="250"></a>
+  <a href="mailto:aleixauque@gmail.com"><img src="assets/btn-email.svg" alt="Email · aleixauque@gmail.com" width="250"></a>
 </p>
