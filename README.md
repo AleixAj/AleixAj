@@ -20,66 +20,32 @@ manos de usuarios reales.
 
 ## Proyectos destacados
 
-<table>
-  <tr>
-    <td width="33%" align="center" valign="top">
-      <a href="https://github.com/AleixAj/obsidian"><img src="assets/obsidian.png" width="96" alt="Obsidian"></a>
-      <h3>Obsidian</h3>
-      <sub>E-commerce full-stack de streetwear: catálogo Laravel, autenticación Sanctum, carrito y wishlist sincronizados y checkout con pedidos reales.</sub>
-      <br><br>
-      <code>React</code> <code>TypeScript</code> <code>Laravel</code> <code>MySQL</code>
-      <br><br>
-      <a href="https://obsidian.aleixaj.com"><b>Demo</b></a> · <a href="https://github.com/AleixAj/obsidian">Código</a>
-    </td>
-    <td width="33%" align="center" valign="top">
-      <a href="https://kylen02.itch.io/orbex"><img src="assets/orbex.png" width="96" alt="Orbex"></a>
-      <h3>Orbex</h3>
-      <sub>Juego arcade estilo Zuma con 10 mundos y 80 niveles en pixel art hecho a mano. Ranking online, telemetría y anti-trampas con Supabase.</sub>
-      <br><br>
-      <code>Godot</code> <code>GDScript</code> <code>Supabase</code> <code>PostgreSQL</code>
-      <br><br>
-      <a href="https://play.google.com/store/apps/details?id=com.aleix.orbex"><b>Google Play</b></a> · <a href="https://kylen02.itch.io/orbex">Jugar</a> · <a href="https://github.com/AleixAj/orbex-web">Web</a>
-    </td>
-    <td width="33%" align="center" valign="top">
-      <a href="https://github.com/AleixAj/nexus"><img src="assets/nexus.png" width="96" alt="NEXUS"></a>
-      <h3>NEXUS</h3>
-      <sub>Asistente de escritorio al estilo J.A.R.V.I.S.: agente de IA con 46 herramientas, voz, frase de activación sin conexión y fondo de escritorio animado.</sub>
-      <br><br>
-      <code>Electron</code> <code>TypeScript</code> <code>React</code> <code>AI&nbsp;Agents</code>
-      <br><br>
-      <a href="https://github.com/AleixAj/nexus/releases/latest/download/NEXUS-Setup.exe"><b>Descargar</b></a> · <a href="https://github.com/AleixAj/nexus">Código</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="33%" align="center" valign="top">
-      <a href="https://github.com/AleixAj/waymark"><img src="assets/waymark.png" width="96" alt="Waymark"></a>
-      <h3>Waymark</h3>
-      <sub>Tus fotos de viaje sobre un globo 3D: lee el GPS, detecta los viajes solo y se sincroniza con tu Google Drive, sin servidor.</sub>
-      <br><br>
-      <code>SvelteKit</code> <code>TypeScript</code> <code>MapLibre</code> <code>Web&nbsp;Workers</code>
-      <br><br>
-      <a href="https://waymark.aleixaj.com"><b>Demo</b></a> · <a href="https://github.com/AleixAj/waymark">Código</a>
-    </td>
-    <td width="33%" align="center" valign="top">
-      <a href="https://github.com/AleixAj/nadir"><img src="assets/nadir.png" width="96" alt="Nadir"></a>
-      <h3>Nadir</h3>
-      <sub>Monitor de precios full-stack: compara tiendas, guarda el histórico y avisa por email cuando baja del precio objetivo.</sub>
-      <br><br>
-      <code>Next.js</code> <code>TypeScript</code> <code>PostgreSQL</code> <code>Drizzle</code>
-      <br><br>
-      <a href="https://nadir.aleixaj.com"><b>Demo</b></a> · <a href="https://github.com/AleixAj/nadir">Código</a>
-    </td>
-    <td width="33%" align="center" valign="top">
-      <a href="https://github.com/AleixAj/kylenchat"><img src="assets/kylenchat.png" width="96" alt="Kylen Chat for Twitch"></a>
-      <h3>Kylen Chat</h3>
-      <sub>App para streamers con una sola pantalla: el chat de Twitch transparente encima del juego, con emotes y perfiles por juego.</sub>
-      <br><br>
-      <code>Electron</code> <code>JavaScript</code> <code>Node.js</code> <code>WebSocket</code>
-      <br><br>
-      <a href="https://github.com/AleixAj/kylenchat/releases/latest/download/KylenChat-Setup.exe"><b>Descargar</b></a> · <a href="https://github.com/AleixAj/kylenchat">Código</a>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/AleixAj/obsidian"><img src="assets/cards/obsidian.svg" width="49%" alt="Obsidian"></a>
+  <a href="https://github.com/AleixAj/orbex-web"><img src="assets/cards/orbex.svg" width="49%" alt="Orbex"></a>
+  <br>
+  <a href="https://obsidian.aleixaj.com"><img src="assets/cards/obsidian-demo.svg" width="23.5%" alt="Obsidian: Ver demo"></a> <a href="https://github.com/AleixAj/obsidian"><img src="assets/cards/obsidian-code.svg" width="23.5%" alt="Obsidian: Código"></a>
+  &nbsp;&nbsp;
+  <a href="https://play.google.com/store/apps/details?id=com.aleix.orbex"><img src="assets/cards/orbex-play.svg" width="23.5%" alt="Orbex: Google Play"></a> <a href="https://kylen02.itch.io/orbex"><img src="assets/cards/orbex-game.svg" width="23.5%" alt="Orbex: Jugar"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/AleixAj/nexus"><img src="assets/cards/nexus.svg" width="49%" alt="NEXUS"></a>
+  <a href="https://github.com/AleixAj/waymark"><img src="assets/cards/waymark.svg" width="49%" alt="Waymark"></a>
+  <br>
+  <a href="https://github.com/AleixAj/nexus/releases/latest/download/NEXUS-Setup.exe"><img src="assets/cards/nexus-download.svg" width="23.5%" alt="NEXUS: Descargar"></a> <a href="https://github.com/AleixAj/nexus"><img src="assets/cards/nexus-code.svg" width="23.5%" alt="NEXUS: Código"></a>
+  &nbsp;&nbsp;
+  <a href="https://waymark.aleixaj.com"><img src="assets/cards/waymark-demo.svg" width="23.5%" alt="Waymark: Ver demo"></a> <a href="https://github.com/AleixAj/waymark"><img src="assets/cards/waymark-code.svg" width="23.5%" alt="Waymark: Código"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/AleixAj/nadir"><img src="assets/cards/nadir.svg" width="49%" alt="Nadir"></a>
+  <a href="https://github.com/AleixAj/kylenchat"><img src="assets/cards/kylenchat.svg" width="49%" alt="Kylen Chat"></a>
+  <br>
+  <a href="https://nadir.aleixaj.com"><img src="assets/cards/nadir-demo.svg" width="23.5%" alt="Nadir: Ver demo"></a> <a href="https://github.com/AleixAj/nadir"><img src="assets/cards/nadir-code.svg" width="23.5%" alt="Nadir: Código"></a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/AleixAj/kylenchat/releases/latest/download/KylenChat-Setup.exe"><img src="assets/cards/kylenchat-download.svg" width="23.5%" alt="Kylen Chat: Descargar"></a> <a href="https://github.com/AleixAj/kylenchat"><img src="assets/cards/kylenchat-code.svg" width="23.5%" alt="Kylen Chat: Código"></a>
+</p>
 
 <p align="center"><sub>Más proyectos, con capturas y detalles técnicos, en <a href="https://aleixaj.com"><b>aleixaj.com</b></a></sub></p>
 
