@@ -1,45 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="556" viewBox="0 0 1200 556">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0D1424"/><stop offset="1" stop-color="#070B16"/></linearGradient>
     <radialGradient id="g1" cx="12%" cy="0%" r="60%"><stop offset="0" stop-color="#22D3EE" stop-opacity=".16"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
     <radialGradient id="g2" cx="0%" cy="100%" r="55%"><stop offset="0" stop-color="#A855F7" stop-opacity=".12"/><stop offset="1" stop-color="#A855F7" stop-opacity="0"/></radialGradient>
     <linearGradient id="edge" x1="0" x2="1"><stop offset="0" stop-color="#22D3EE" stop-opacity="0"/><stop offset=".5" stop-color="#22D3EE"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></linearGradient>
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#fff" stroke-opacity=".03"/></pattern>
-    <clipPath id="c"><rect x="1" y="1" width="1198" height="648" rx="24"/></clipPath>
+    <clipPath id="c"><rect x="1" y="1" width="1198" height="554" rx="24"/></clipPath>
   </defs>
   <g clip-path="url(#c)">
-    <rect width="1200" height="650" fill="url(#bg)"/><rect width="1200" height="650" fill="url(#grid)"/>
-    <rect width="1200" height="650" fill="url(#g1)"/><rect width="1200" height="650" fill="url(#g2)"/>
+    <rect width="1200" height="556" fill="url(#bg)"/><rect width="1200" height="556" fill="url(#grid)"/>
+    <rect width="1200" height="556" fill="url(#g1)"/><rect width="1200" height="556" fill="url(#g2)"/>
     <rect x="120" y="0" width="960" height="2" fill="url(#edge)"/>
   </g>
-  <rect x="1" y="1" width="1198" height="648" rx="24" fill="none" stroke="#22D3EE" stroke-opacity=".22" stroke-width="1.5"/>
+  <rect x="1" y="1" width="1198" height="554" rx="24" fill="none" stroke="#22D3EE" stroke-opacity=".22" stroke-width="1.5"/>
   <text x="48" y="64" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF">Trayectoria</text>
   <text x="1152" y="62" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" fill="#94A3B8" letter-spacing="1.5">MÁS DE 6 AÑOS EN PRODUCCIÓN</text>
-  <rect x="279" y="120" width="2" height="436" fill="#334155"/>
-  <text x="252" y="138" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#22D3EE" letter-spacing="1">ENE 2026 – HOY</text>
-  <circle cx="280" cy="133" r="13" fill="#22D3EE" fill-opacity=".15"/>
-  <circle cx="280" cy="133" r="6" fill="#22D3EE" stroke="#070B16" stroke-width="2"/>
-  <text x="312" y="140" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Desarrollo de producto y formación<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#22D3EE" font-weight="600">Proyectos propios</tspan></text>
-  <text x="312" y="168" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Productos propios de la idea a producción, sobre todo Orbex, publicado en Google Play.</text>
-  <text x="252" y="242" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#A855F7" letter-spacing="1">AGO 2025 – ENE 2026</text>
-  <circle cx="280" cy="237" r="13" fill="#A855F7" fill-opacity=".15"/>
-  <circle cx="280" cy="237" r="6" fill="#A855F7" stroke="#070B16" stroke-width="2"/>
-  <text x="312" y="244" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Desarrollador de Software<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#A855F7" font-weight="600">Grup Romeu</tspan></text>
-  <text x="312" y="272" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Full-stack con PHP y JavaScript: aplicación interna para gestionar material quirúrgico.</text>
-  <text x="252" y="346" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#F97316" letter-spacing="1">MAY 2023 – ABR 2025</text>
-  <circle cx="280" cy="341" r="13" fill="#F97316" fill-opacity=".15"/>
-  <circle cx="280" cy="341" r="6" fill="#F97316" stroke="#070B16" stroke-width="2"/>
-  <text x="312" y="348" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Desarrollador de Software<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#F97316" font-weight="600">Nemon</tspan></text>
-  <text x="312" y="376" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Soluciones a medida para distribuidoras de electricidad y gas sobre un framework propio en PHP.</text>
-  <text x="252" y="450" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#3B82F6" letter-spacing="1">NOV 2019 – ABR 2023</text>
-  <circle cx="280" cy="445" r="13" fill="#3B82F6" fill-opacity=".15"/>
-  <circle cx="280" cy="445" r="6" fill="#3B82F6" stroke="#070B16" stroke-width="2"/>
-  <text x="312" y="452" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Release Manager y Desarrollador<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#3B82F6" font-weight="600">VIEWNEXT</tspan></text>
-  <text x="312" y="480" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Releases en entornos corporativos: Salesforce (Nestlé), COPADO (CaixaBank), Bitbucket y Jenkins</text>
-  <text x="312" y="504" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">(Naturgy).</text>
-  <text x="252" y="554" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#10B981" letter-spacing="1">FEB – JUN 2018</text>
-  <circle cx="280" cy="549" r="13" fill="#10B981" fill-opacity=".15"/>
-  <circle cx="280" cy="549" r="6" fill="#10B981" stroke="#070B16" stroke-width="2"/>
-  <text x="312" y="556" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Desarrollador de Software (prácticas)<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#10B981" font-weight="600">C. R. Pantà de Riudecanyes</tspan></text>
-  <text x="312" y="584" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">400 h manteniendo y mejorando software de gestión de usuarios y base de datos.</text>
+  <rect x="279" y="116" width="2" height="372" fill="#334155"/>
+  <text x="252" y="134" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#22D3EE" letter-spacing="1">ENE 2026 – HOY</text>
+  <circle cx="280" cy="129" r="13" fill="#22D3EE" fill-opacity=".15"/>
+  <circle cx="280" cy="129" r="6" fill="#22D3EE" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="136" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Desarrollo de producto y formación<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#22D3EE" font-weight="600">Proyectos propios</tspan></text>
+  <text x="312" y="164" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Productos propios de la idea a producción, sobre todo Orbex, publicado en Google Play.</text>
+  <text x="252" y="222" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#A855F7" letter-spacing="1">AGO 2025 – ENE 2026</text>
+  <circle cx="280" cy="217" r="13" fill="#A855F7" fill-opacity=".15"/>
+  <circle cx="280" cy="217" r="6" fill="#A855F7" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="224" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Desarrollador de Software<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#A855F7" font-weight="600">Grup Romeu</tspan></text>
+  <text x="312" y="252" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Full-stack con PHP y JavaScript: aplicación interna para gestionar material quirúrgico.</text>
+  <text x="252" y="310" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#F97316" letter-spacing="1">MAY 2023 – ABR 2025</text>
+  <circle cx="280" cy="305" r="13" fill="#F97316" fill-opacity=".15"/>
+  <circle cx="280" cy="305" r="6" fill="#F97316" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="312" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Desarrollador de Software<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#F97316" font-weight="600">Nemon</tspan></text>
+  <text x="312" y="340" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Soluciones a medida para distribuidoras de electricidad y gas sobre un framework propio en PHP.</text>
+  <text x="252" y="398" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#3B82F6" letter-spacing="1">NOV 2019 – ABR 2023</text>
+  <circle cx="280" cy="393" r="13" fill="#3B82F6" fill-opacity=".15"/>
+  <circle cx="280" cy="393" r="6" fill="#3B82F6" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="400" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Release Manager y Desarrollador<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#3B82F6" font-weight="600">VIEWNEXT</tspan></text>
+  <text x="312" y="428" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Releases en grandes empresas: Salesforce (Nestlé), COPADO (CaixaBank) y Jenkins (Naturgy).</text>
+  <text x="252" y="486" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#10B981" letter-spacing="1">FEB – JUN 2018</text>
+  <circle cx="280" cy="481" r="13" fill="#10B981" fill-opacity=".15"/>
+  <circle cx="280" cy="481" r="6" fill="#10B981" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="488" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Desarrollador de Software (prácticas)<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#10B981" font-weight="600">C. R. Pantà de Riudecanyes</tspan></text>
+  <text x="312" y="516" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">400 h manteniendo y mejorando software de gestión de usuarios y base de datos.</text>
 </svg>

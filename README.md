@@ -49,19 +49,11 @@ manos de usuarios reales.
 
 <p align="center"><sub>Más proyectos, con capturas y detalles técnicos, en <a href="https://aleixaj.com"><b>aleixaj.com</b></a></sub></p>
 
-<br>
-
-<img src="assets/stack.svg" width="100%" alt="Tecnologías: JavaScript, TypeScript, PHP, SQL, HTML, CSS · React, Next.js, Svelte, Three.js, Tailwind CSS, Electron · Laravel, Node.js, PostgreSQL, MySQL, Supabase · Git, Vite, Vitest, Cloudflare, Godot, Claude Code">
-
-<br><br>
-
-<img src="assets/career.svg" width="100%" alt="Trayectoria: proyectos propios (2026 – hoy), Grup Romeu (2025 – 2026), Nemon (2023 – 2025), VIEWNEXT (2019 – 2023), prácticas en C. R. Pantà de Riudecanyes (2018)">
-
-<br><br>
-
-<img src="assets/education.svg" width="100%" alt="Formación: Bootcamp Frontend en Lemoncoders (2025), bootcamps de PHP y Java en Fundació Esplai (2019), CFGS DAW en INS Baix Camp (2015 – 2018), ESO y Bachillerato Tecnológico (2008 – 2014)">
-
-<br><br>
+<p align="center">
+  <img src="assets/stack.svg" width="100%" alt="Tecnologías: JavaScript, TypeScript, PHP, SQL, HTML, CSS · React, Next.js, Svelte, Three.js, Tailwind CSS, Electron · Laravel, Node.js, PostgreSQL, MySQL, Supabase · Git, Vite, Vitest, Cloudflare, Godot, Claude Code"><br>
+  <img src="assets/career.svg" width="100%" alt="Trayectoria: proyectos propios (2026 – hoy), Grup Romeu (2025 – 2026), Nemon (2023 – 2025), VIEWNEXT (2019 – 2023), prácticas en C. R. Pantà de Riudecanyes (2018)"><br>
+  <img src="assets/education.svg" width="100%" alt="Formación: Bootcamp Frontend en Lemoncoders (2025), bootcamps de PHP y Java en Fundació Esplai (2019), CFGS DAW en INS Baix Camp (2015 – 2018), ESO y Bachillerato Tecnológico (2008 – 2014)">
+</p>
 
 <p align="center"><b>¿Hablamos?</b></p>
 <p align="center">

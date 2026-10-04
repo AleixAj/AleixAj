@@ -77,7 +77,7 @@ CAREER = [
     ('MAY 2023 – ABR 2025', 'Desarrollador de Software', 'Nemon', '#F97316',
      'Soluciones a medida para distribuidoras de electricidad y gas sobre un framework propio en PHP.'),
     ('NOV 2019 – ABR 2023', 'Release Manager y Desarrollador', 'VIEWNEXT', '#3B82F6',
-     'Releases en entornos corporativos: Salesforce (Nestlé), COPADO (CaixaBank), Bitbucket y Jenkins (Naturgy).'),
+     'Releases en grandes empresas: Salesforce (Nestlé), COPADO (CaixaBank) y Jenkins (Naturgy).'),
     ('FEB – JUN 2018', 'Desarrollador de Software (prácticas)', 'C. R. Pantà de Riudecanyes', '#10B981',
      '400 h manteniendo y mejorando software de gestión de usuarios y base de datos.'),
 ]
@@ -91,8 +91,10 @@ EDUCATION = [
 
 
 def timeline(title, sub, rows):
-    W, step, top = 1200, 104, 120
-    H = top + step * len(rows) + 10
+    W, step, top = 1200, 88, 116
+    # the last entry only needs room for its own lines
+    last = 30 + 24 * len(textwrap.wrap(rows[-1][4], 100)[:2])
+    H = top + step * (len(rows) - 1) + last + 34
     out = [f'  <text x="48" y="64" font-family="{FONT}" font-size="30" font-weight="700" fill="#FFFFFF">{escape(title)}</text>',
            f'  <text x="1152" y="62" text-anchor="end" font-family="{MONO}" font-size="14" fill="#94A3B8" letter-spacing="1.5">{escape(sub)}</text>',
            f'  <rect x="279" y="{top}" width="2" height="{step * (len(rows) - 1) + 20}" fill="#334155"/>']
