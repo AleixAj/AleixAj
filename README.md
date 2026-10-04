@@ -45,7 +45,7 @@ manos de usuarios reales.
       <h3>NEXUS</h3>
       <sub>Asistente de escritorio al estilo J.A.R.V.I.S.: agente de IA con 46 herramientas, voz, frase de activación sin conexión y fondo de escritorio animado.</sub>
       <br><br>
-      <code>Electron</code> <code>TypeScript</code> <code>React</code> <code>AI Agents</code>
+      <code>Electron</code> <code>TypeScript</code> <code>React</code> <code>AI&nbsp;Agents</code>
       <br><br>
       <a href="https://github.com/AleixAj/nexus/releases/latest/download/NEXUS-Setup.exe"><b>Descargar</b></a> · <a href="https://github.com/AleixAj/nexus">Código</a>
     </td>
@@ -56,7 +56,7 @@ manos de usuarios reales.
       <h3>Waymark</h3>
       <sub>Tus fotos de viaje sobre un globo 3D: lee el GPS, detecta los viajes solo y se sincroniza con tu Google Drive, sin servidor.</sub>
       <br><br>
-      <code>SvelteKit</code> <code>TypeScript</code> <code>MapLibre</code> <code>Web Workers</code>
+      <code>SvelteKit</code> <code>TypeScript</code> <code>MapLibre</code> <code>Web&nbsp;Workers</code>
       <br><br>
       <a href="https://waymark.aleixaj.com"><b>Demo</b></a> · <a href="https://github.com/AleixAj/waymark">Código</a>
     </td>
