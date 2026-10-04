@@ -1,9 +1,9 @@
 <a href="https://aleixaj.com"><img src="assets/header.svg" alt="Aleix Auqué · Software Developer · Full-stack" width="100%"></a>
 
 <p align="center">
-  <a href="https://aleixaj.com"><img src="https://img.shields.io/badge/Portfolio-aleixaj.com-22d3ee?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"></a>
-  <a href="https://linkedin.com/in/aleixauque/"><img src="https://img.shields.io/badge/LinkedIn-aleixauque-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="mailto:aleixauque@gmail.com"><img src="https://img.shields.io/badge/Email-aleixauque%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="https://aleixaj.com"><img src="assets/btn-portfolio.svg" alt="Portfolio · aleixaj.com" width="250"></a>
+  <a href="https://linkedin.com/in/aleixauque/"><img src="assets/btn-linkedin.svg" alt="LinkedIn · in/aleixauque" width="250"></a>
+  <a href="mailto:aleixauque@gmail.com"><img src="assets/btn-email.svg" alt="Email · aleixauque@gmail.com" width="250"></a>
 </p>
 
 ### Sobre mí
