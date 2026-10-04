@@ -27,7 +27,7 @@ PROJECTS = [
     dict(id='obsidian', name='Obsidian', logo='obsidian.png', accent='#E8B04B', kind='E-COMMERCE FULL-STACK',
          desc=['Tienda de streetwear con catálogo en Laravel, login', 'Sanctum, carrito sincronizado y pedidos reales.'],
          tags=['React', 'TypeScript', 'Laravel', 'MySQL'], repo='https://github.com/AleixAj/obsidian',
-         buttons=[('demo', 'Ver demo', 'https://obsidian.aleixaj.com'), ('code', 'Código', 'https://github.com/AleixAj/obsidian')]),
+         buttons=[('demo', 'Ver demo', 'https://obsidian.aleixaj.com'), ('code', 'GitHub', 'https://github.com/AleixAj/obsidian')]),
     dict(id='orbex', name='Orbex', logo='orbex.png', accent='#A78BFA', kind='JUEGO MÓVIL · GOOGLE PLAY',
          desc=['Arcade estilo Zuma: 10 mundos y 80 niveles en pixel', 'art hecho a mano, ranking online y anti-trampas.'],
          tags=['Godot', 'GDScript', 'Supabase', 'PostgreSQL'], repo='https://github.com/AleixAj/orbex-web',
@@ -35,19 +35,19 @@ PROJECTS = [
     dict(id='nexus', name='NEXUS', logo='nexus.png', accent='#F97316', kind='ASISTENTE DE IA · WINDOWS',
          desc=['Agente con 46 herramientas, voz, frase de activación', 'sin conexión y fondo de escritorio animado.'],
          tags=['Electron', 'TypeScript', 'React', 'AI Agents'], repo='https://github.com/AleixAj/nexus',
-         buttons=[('download', 'Descargar', 'https://github.com/AleixAj/nexus/releases/latest/download/NEXUS-Setup.exe'), ('code', 'Código', 'https://github.com/AleixAj/nexus')]),
+         buttons=[('download', 'Descargar', 'https://github.com/AleixAj/nexus/releases/latest/download/NEXUS-Setup.exe'), ('code', 'GitHub', 'https://github.com/AleixAj/nexus')]),
     dict(id='waymark', name='Waymark', logo='waymark.png', accent='#38BDF8', kind='FOTOS DE VIAJE EN 3D',
          desc=['Lee el GPS de tus fotos, detecta los viajes solo y', 'los pone en un globo 3D. Sin servidor.'],
          tags=['SvelteKit', 'TypeScript', 'MapLibre', 'Web Workers'], repo='https://github.com/AleixAj/waymark',
-         buttons=[('demo', 'Ver demo', 'https://waymark.aleixaj.com'), ('code', 'Código', 'https://github.com/AleixAj/waymark')]),
+         buttons=[('demo', 'Ver demo', 'https://waymark.aleixaj.com'), ('code', 'GitHub', 'https://github.com/AleixAj/waymark')]),
     dict(id='nadir', name='Nadir', logo='nadir.png', accent='#F0602C', kind='MONITOR DE PRECIOS',
          desc=['Compara tiendas, guarda el histórico y te avisa por', 'email cuando baja del precio que quieres.'],
          tags=['Next.js', 'TypeScript', 'PostgreSQL', 'Drizzle'], repo='https://github.com/AleixAj/nadir',
-         buttons=[('demo', 'Ver demo', 'https://nadir.aleixaj.com'), ('code', 'Código', 'https://github.com/AleixAj/nadir')]),
+         buttons=[('demo', 'Ver demo', 'https://nadir.aleixaj.com'), ('code', 'GitHub', 'https://github.com/AleixAj/nadir')]),
     dict(id='kylenchat', name='Kylen Chat', logo='kylenchat.png', accent='#A970FF', kind='APP PARA STREAMERS',
          desc=['El chat de Twitch transparente encima del juego,', 'con emotes de 7TV, BTTV y FFZ y perfiles por juego.'],
          tags=['Electron', 'JavaScript', 'Node.js', 'WebSocket'], repo='https://github.com/AleixAj/kylenchat',
-         buttons=[('download', 'Descargar', 'https://github.com/AleixAj/kylenchat/releases/latest/download/KylenChat-Setup.exe'), ('code', 'Código', 'https://github.com/AleixAj/kylenchat')]),
+         buttons=[('download', 'Descargar', 'https://github.com/AleixAj/kylenchat/releases/latest/download/KylenChat-Setup.exe'), ('code', 'GitHub', 'https://github.com/AleixAj/kylenchat')]),
 ]
 
 
@@ -112,7 +112,8 @@ def card(p):
 
 ICONS = {
     'demo': '<path d="M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9M12 3C9.5 5.6 8.2 8.6 8.2 12s1.3 6.4 3.8 9"/>',
-    'code': '<path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/>',
+    # the GitHub mark, filled with the stroke colour
+    'code': '<path stroke="none" fill="COL" d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.53.1.72-.23.72-.5v-1.86c-2.93.64-3.55-1.24-3.55-1.24-.48-1.22-1.17-1.54-1.17-1.54-.96-.66.07-.64.07-.64 1.06.07 1.61 1.09 1.61 1.09.94 1.61 2.47 1.15 3.07.88.1-.68.37-1.15.67-1.41-2.34-.27-4.8-1.17-4.8-5.2 0-1.15.41-2.09 1.08-2.83-.11-.27-.47-1.34.1-2.79 0 0 .88-.28 2.89 1.08a10 10 0 0 1 5.26 0c2-1.36 2.88-1.08 2.88-1.08.58 1.45.22 2.52.11 2.79.67.74 1.08 1.68 1.08 2.83 0 4.04-2.47 4.93-4.81 5.19.38.33.71.97.71 1.96v2.9c0 .28.19.61.73.5A10.5 10.5 0 0 0 12 1.5z"/>',
     'download': '<path d="M12 3v12M7 10l5 5 5-5M4 20h16"/>',
     'play': '<path d="M5 3.5v17l15-8.5z"/>',
     'game': '<path d="M7 9v6M4 12h6M15.5 10.5h.01M18 13.5h.01M6 5h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4z"/>',
@@ -133,7 +134,7 @@ def button(p, kind, label, primary):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <defs><linearGradient id="f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{a}"/><stop offset="1" stop-color="{a}" stop-opacity=".78"/></linearGradient></defs>
   {fill}
-  <g transform="translate({x0:.0f} 20)" fill="none" stroke="{col if not primary else ink}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{ICONS[kind]}</g>
+  <g transform="translate({x0:.0f} 20)" fill="none" stroke="{col if not primary else ink}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{ICONS[kind].replace('COL', col if not primary else ink)}</g>
   <text x="{x0 + 36:.0f}" y="39" font-family="{FONT}" font-size="18" font-weight="700" fill="{col}">{escape(label)}</text>
 </svg>
 '''
