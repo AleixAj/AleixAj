@@ -8,7 +8,7 @@ import io
 import os
 from xml.sax.saxutils import escape
 
-from PIL import Image
+from PIL import Image, ImageFont
 
 OUT = 'assets/cards'
 FONT = "'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif"
@@ -66,9 +66,23 @@ def logo_data(name, size=192):
     return 'data:image/png;base64,' + base64.b64encode(b.getvalue()).decode()
 
 
+try:
+    # the tags use Segoe UI Semibold at 15px, so measure the real text with it
+    PILL_FONT = ImageFont.truetype('C:/Windows/Fonts/seguisb.ttf', 15)
+except OSError:
+    PILL_FONT = None
+
+
 def pill_w(text):
-    # Segoe UI semibold at 15px: capitals are wider than the rest, plus the padding
-    return round(sum(10.6 if c.isupper() else 4.6 if c in ' .ijl' else 8.4 for c in text) + 36)
+    # 25px from the edge to the text (the dot sits in there) and 12px after it.
+    # 4% extra on the text because on a Mac it falls back to Helvetica Neue,
+    # which is a bit wider than Segoe UI.
+    if PILL_FONT:
+        text_w = PILL_FONT.getlength(text) * 1.04
+    else:
+        # no Segoe UI on this machine: rough guess per letter (capitals are wider)
+        text_w = sum(9.4 if c.isupper() else 4.2 if c in ' .ijl' else 7.4 for c in text)
+    return round(25 + text_w + 12)
 
 
 def card(p):
