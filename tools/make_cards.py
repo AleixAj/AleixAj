@@ -116,8 +116,6 @@ def card(p):
   <image x="34" y="34" width="84" height="84" href="{logo_data(p['logo'])}" clip-path="url(#logo)"/>
   <text x="148" y="74" font-family="{FONT}" font-size="33" font-weight="700" fill="#FFFFFF" letter-spacing="-.5">{escape(p['name'])}</text>
   <text x="150" y="108" font-family="{MONO}" font-size="15" font-weight="700" fill="{a}" letter-spacing="1.6">{escape(p['kind'])}</text>
-  <circle cx="548" cy="58" r="20" fill="{a}" fill-opacity=".12" stroke="{a}" stroke-opacity=".4"/>
-  <path d="M541 65l14-14M545 51h10v10" fill="none" stroke="{a}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
   {desc}
   {''.join(tags)}
 </svg>
