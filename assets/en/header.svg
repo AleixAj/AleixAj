@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360">
+  <defs>
+    <radialGradient id="glow" cx="78%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".42"/>
+      <stop offset=".5" stop-color="#0f172a" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violet" cx="92%" cy="80%" r="40%">
+      <stop offset="0" stop-color="#a855f7" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".25" stop-color="#a5f3fc"/>
+      <stop offset=".6" stop-color="#22d3ee" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#22d3ee" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#22d3ee" stroke-opacity=".06" stroke-width="1"/>
+    </pattern>
+    <clipPath id="frame"><rect width="1280" height="360" rx="24"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1280" height="360" fill="#020617"/>
+    <rect width="1280" height="360" fill="url(#grid)"/>
+    <rect width="1280" height="360" fill="url(#glow)"/>
+    <rect width="1280" height="360" fill="url(#violet)"/>
+
+    <!-- stars -->
+    <g fill="#e2e8f0">
+      <circle cx="610" cy="60" r="1.2" opacity=".6"><animate attributeName="opacity" values=".2;.8;.2" dur="4s" repeatCount="indefinite"/></circle>
+      <circle cx="720" cy="300" r="1" opacity=".5"><animate attributeName="opacity" values=".7;.15;.7" dur="5s" repeatCount="indefinite"/></circle>
+      <circle cx="1210" cy="70" r="1.4" opacity=".7"><animate attributeName="opacity" values=".3;.9;.3" dur="3.5s" repeatCount="indefinite"/></circle>
+      <circle cx="840" cy="40" r="1" opacity=".4"/>
+      <circle cx="1180" cy="310" r="1.1" opacity=".5"><animate attributeName="opacity" values=".6;.2;.6" dur="6s" repeatCount="indefinite"/></circle>
+      <circle cx="560" cy="250" r=".9" opacity=".4"/>
+      <circle cx="1240" cy="190" r="1" opacity=".5"/>
+    </g>
+
+    <!-- orbiting core -->
+    <g transform="translate(1000 180)">
+      <circle r="120" fill="none" stroke="#22d3ee" stroke-opacity=".18" stroke-width="1"/>
+      <g>
+        <circle r="96" fill="none" stroke="#22d3ee" stroke-opacity=".55" stroke-width="2" stroke-dasharray="120 30 40 30"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/>
+      </g>
+      <g>
+        <circle r="70" fill="none" stroke="#a855f7" stroke-opacity=".6" stroke-width="2" stroke-dasharray="60 24 14 24"/>
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="16s" repeatCount="indefinite"/>
+      </g>
+      <g>
+        <ellipse rx="150" ry="44" fill="none" stroke="#e2e8f0" stroke-opacity=".12" stroke-width="1" transform="rotate(-18)"/>
+        <circle cx="150" cy="0" r="4" fill="#fbbf24" transform="rotate(-18)"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="30s" repeatCount="indefinite"/>
+      </g>
+      <circle r="44" fill="url(#core)">
+        <animate attributeName="r" values="40;48;40" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="10" fill="#ffffff"/>
+    </g>
+
+    <!-- text -->
+    <text x="72" y="98" fill="#22d3ee" font-family="'JetBrains Mono', Consolas, monospace" font-size="16" letter-spacing="5">HI, I’M</text>
+    <text x="68" y="168" fill="#ffffff" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="-1.5">Aleix Auqué</text>
+    <text x="72" y="214" fill="#22d3ee" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" font-weight="600">Software Developer · Full-stack</text>
+    <text x="72" y="258" fill="#cbd5e1" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="20">6+ years shipping software to production: web, desktop, games and AI.</text>
+    <path d="M72 292 H640" stroke="url(#line)" stroke-width="2"/>
+    <text x="72" y="320" fill="#94a3b8" font-family="'JetBrains Mono', Consolas, monospace" font-size="15" letter-spacing="1">JavaScript · TypeScript · PHP · React · Laravel · Three.js</text>
+  </g>
+  <rect x=".75" y=".75" width="1278.5" height="358.5" rx="23.25" fill="none" stroke="#22d3ee" stroke-opacity=".25" stroke-width="1.5"/>
+</svg>

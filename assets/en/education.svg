@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="532" viewBox="0 0 1200 532">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0D1424"/><stop offset="1" stop-color="#070B16"/></linearGradient>
+    <radialGradient id="g1" cx="12%" cy="0%" r="60%"><stop offset="0" stop-color="#22D3EE" stop-opacity=".16"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g2" cx="0%" cy="100%" r="55%"><stop offset="0" stop-color="#A855F7" stop-opacity=".12"/><stop offset="1" stop-color="#A855F7" stop-opacity="0"/></radialGradient>
+    <linearGradient id="edge" x1="0" x2="1"><stop offset="0" stop-color="#22D3EE" stop-opacity="0"/><stop offset=".5" stop-color="#22D3EE"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#fff" stroke-opacity=".03"/></pattern>
+    <clipPath id="c"><rect x="1" y="1" width="1198" height="530" rx="24"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="1200" height="532" fill="url(#bg)"/><rect width="1200" height="532" fill="url(#grid)"/>
+    <rect width="1200" height="532" fill="url(#g1)"/><rect width="1200" height="532" fill="url(#g2)"/>
+    <rect x="120" y="0" width="960" height="2" fill="url(#edge)"/>
+  </g>
+  <rect x="1" y="1" width="1198" height="530" rx="24" fill="none" stroke="#22D3EE" stroke-opacity=".22" stroke-width="1.5"/>
+  <text x="48" y="64" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF">Education</text>
+  <text x="1152" y="62" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" fill="#94A3B8" letter-spacing="1.5">HIGHER DIPLOMA · BOOTCAMPS</text>
+  <rect x="279" y="116" width="2" height="372" fill="#334155"/>
+  <text x="252" y="134" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#22D3EE" letter-spacing="1">MAY 2025</text>
+  <circle cx="280" cy="129" r="13" fill="#22D3EE" fill-opacity=".15"/>
+  <circle cx="280" cy="129" r="6" fill="#22D3EE" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="136" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Frontend Developer Bootcamp<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#22D3EE" font-weight="600">Lemoncoders</tspan></text>
+  <text x="312" y="164" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">JavaScript, TypeScript, HTML, CSS and React.</text>
+  <text x="252" y="222" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#8892BF" letter-spacing="1">JUL – SEP 2019</text>
+  <circle cx="280" cy="217" r="13" fill="#8892BF" fill-opacity=".15"/>
+  <circle cx="280" cy="217" r="6" fill="#8892BF" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="224" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">PHP Bootcamp<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#8892BF" font-weight="600">Fundació Esplai</tspan></text>
+  <text x="312" y="252" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">275 on-site hours: PHP and Laravel.</text>
+  <text x="252" y="310" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#F97316" letter-spacing="1">APR – JUN 2019</text>
+  <circle cx="280" cy="305" r="13" fill="#F97316" fill-opacity=".15"/>
+  <circle cx="280" cy="305" r="6" fill="#F97316" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="312" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Java Bootcamp<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#F97316" font-weight="600">Fundació Esplai</tspan></text>
+  <text x="312" y="340" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">275 on-site hours: Java and SQL.</text>
+  <text x="252" y="398" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#A855F7" letter-spacing="1">2015 – 2018</text>
+  <circle cx="280" cy="393" r="13" fill="#A855F7" fill-opacity=".15"/>
+  <circle cx="280" cy="393" r="6" fill="#A855F7" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="400" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Higher National Diploma in Web Development (DAW)<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#A855F7" font-weight="600">INS Baix Camp</tspan></text>
+  <text x="312" y="428" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Two-year higher vocational degree.</text>
+  <text x="252" y="486" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#64748B" letter-spacing="1">2008 – 2014</text>
+  <circle cx="280" cy="481" r="13" fill="#64748B" fill-opacity=".15"/>
+  <circle cx="280" cy="481" r="6" fill="#64748B" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="488" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Secondary School and Technology Baccalaureate<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#64748B" font-weight="600">INS Domènech i Montaner</tspan></text>
+</svg>

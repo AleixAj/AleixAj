@@ -1,7 +1,8 @@
 """Project cards and buttons for the profile README (GitHub allows no CSS, so they are drawn as SVG).
 
 Run from the repo root:  python tools/make_cards.py
-Writes assets/cards/<id>.svg and assets/cards/<id>-<button>.svg
+Writes assets/cards/<id>.svg and assets/cards/<id>-<button>.svg (Spanish),
+and the same under assets/en/cards (English).
 """
 import base64
 import io
@@ -10,7 +11,6 @@ from xml.sax.saxutils import escape
 
 from PIL import Image, ImageFont
 
-OUT = 'assets/cards'
 FONT = "'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif"
 MONO = "'JetBrains Mono', Consolas, 'SFMono-Regular', monospace"
 
@@ -26,27 +26,45 @@ TECH = {
 PROJECTS = [
     dict(id='obsidian', name='Obsidian', logo='obsidian.png', accent='#E8B04B', kind='E-COMMERCE FULL-STACK',
          desc=['Tienda de streetwear con catálogo en Laravel, login', 'Sanctum, carrito sincronizado y pedidos reales.'],
+         kind_en='FULL-STACK E-COMMERCE',
+         desc_en=['Streetwear store with a Laravel catalogue, Sanctum', 'login, synced cart and real orders.'],
          tags=['React', 'TypeScript', 'Laravel', 'MySQL'], repo='https://github.com/AleixAj/obsidian',
+         labels_en={'Ver demo': 'Live demo'},
          buttons=[('demo', 'Ver demo', 'https://obsidian.aleixaj.com'), ('code', 'GitHub', 'https://github.com/AleixAj/obsidian')]),
     dict(id='orbex', name='Orbex', logo='orbex.png', accent='#A78BFA', kind='JUEGO MÓVIL · GOOGLE PLAY',
          desc=['Arcade estilo Zuma: 10 mundos y 80 niveles en pixel', 'art hecho a mano, ranking online y anti-trampas.'],
+         kind_en='MOBILE GAME · GOOGLE PLAY',
+         desc_en=['Zuma-style arcade: 10 worlds and 80 levels in', 'hand-made pixel art, online ranking and anti-cheat.'],
          tags=['Godot', 'GDScript', 'Supabase', 'PostgreSQL'], repo='https://github.com/AleixAj/orbex-web',
+         labels_en={'Jugar': 'Play'},
          buttons=[('play', 'Google Play', 'https://play.google.com/store/apps/details?id=com.aleix.orbex'), ('game', 'Jugar', 'https://kylen02.itch.io/orbex')]),
     dict(id='nexus', name='NEXUS', logo='nexus.png', accent='#F97316', kind='ASISTENTE DE IA · WINDOWS',
          desc=['Agente con 46 herramientas, voz, frase de activación', 'sin conexión y fondo de escritorio animado.'],
+         kind_en='AI ASSISTANT · WINDOWS',
+         desc_en=['Agent with 46 tools, voice, offline wake word', 'and an animated desktop wallpaper.'],
          tags=['Electron', 'TypeScript', 'React', 'AI Agents'], repo='https://github.com/AleixAj/nexus',
+         labels_en={'Descargar': 'Download'},
          buttons=[('download', 'Descargar', 'https://github.com/AleixAj/nexus/releases/latest/download/NEXUS-Setup.exe'), ('code', 'GitHub', 'https://github.com/AleixAj/nexus')]),
     dict(id='waymark', name='Waymark', logo='waymark.png', accent='#38BDF8', kind='FOTOS DE VIAJE EN 3D',
          desc=['Lee el GPS de tus fotos, detecta los viajes solo y', 'los pone en un globo 3D. Sin servidor.'],
+         kind_en='TRAVEL PHOTOS IN 3D',
+         desc_en=['Reads the GPS in your photos, finds your trips by', 'itself and puts them on a 3D globe. No server.'],
          tags=['SvelteKit', 'TypeScript', 'MapLibre', 'Web Workers'], repo='https://github.com/AleixAj/waymark',
+         labels_en={'Ver demo': 'Live demo'},
          buttons=[('demo', 'Ver demo', 'https://waymark.aleixaj.com'), ('code', 'GitHub', 'https://github.com/AleixAj/waymark')]),
     dict(id='nadir', name='Nadir', logo='nadir.png', accent='#F0602C', kind='MONITOR DE PRECIOS',
          desc=['Compara tiendas, guarda el histórico y te avisa por', 'email cuando baja del precio que quieres.'],
+         kind_en='PRICE TRACKER',
+         desc_en=['Compares stores, keeps the price history and emails', 'you when it drops below your target price.'],
          tags=['Next.js', 'TypeScript', 'PostgreSQL', 'Drizzle'], repo='https://github.com/AleixAj/nadir',
+         labels_en={'Ver demo': 'Live demo'},
          buttons=[('demo', 'Ver demo', 'https://nadir.aleixaj.com'), ('code', 'GitHub', 'https://github.com/AleixAj/nadir')]),
     dict(id='kylenchat', name='Kylen Chat', logo='kylenchat.png', accent='#A970FF', kind='APP PARA STREAMERS',
          desc=['El chat de Twitch transparente encima del juego,', 'con emotes de 7TV, BTTV y FFZ y perfiles por juego.'],
+         kind_en='APP FOR STREAMERS',
+         desc_en=['Transparent Twitch chat on top of your game, with', '7TV, BTTV and FFZ emotes and per-game profiles.'],
          tags=['Electron', 'JavaScript', 'Node.js', 'WebSocket'], repo='https://github.com/AleixAj/kylenchat',
+         labels_en={'Descargar': 'Download'},
          buttons=[('download', 'Descargar', 'https://github.com/AleixAj/kylenchat/releases/latest/download/KylenChat-Setup.exe'), ('code', 'GitHub', 'https://github.com/AleixAj/kylenchat')]),
 ]
 
@@ -152,18 +170,28 @@ def button(p, kind, label, primary):
 '''
 
 
-os.makedirs(OUT, exist_ok=True)
-for p in PROJECTS:
-    open(f"{OUT}/{p['id']}.svg", 'w', encoding='utf8').write(card(p))
-    for i, (kind, label, _) in enumerate(p['buttons']):
-        open(f"{OUT}/{p['id']}-{kind}.svg", 'w', encoding='utf8').write(button(p, kind, label, i == 0))
+def localized(p, lang):
+    if lang == 'es':
+        return p
+    labels = p['labels_en']
+    return dict(p, kind=p['kind_en'], desc=p['desc_en'],
+                buttons=[(k, labels.get(l, l), u) for k, l, u in p['buttons']])
 
-# the README block, two projects per row
-rows = []
-for i in range(0, len(PROJECTS), 2):
-    pair = PROJECTS[i:i + 2]
-    cards = '\n  '.join(f'<a href="{p["repo"]}"><img src="{OUT}/{p["id"]}.svg" width="49%" alt="{escape(p["name"])}"></a>' for p in pair)
-    btns = '\n  &nbsp;&nbsp;\n  '.join(' '.join(f'<a href="{u}"><img src="{OUT}/{p["id"]}-{k}.svg" width="23.5%" alt="{escape(p["name"])}: {escape(l)}"></a>' for k, l, u in p['buttons']) for p in pair)
-    rows.append(f'<p align="center">\n  {cards}\n  <br>\n  {btns}\n</p>')
-open('tools/projects.html', 'w', encoding='utf8').write('\n\n'.join(rows) + '\n')
+
+for lang, OUT in (('es', 'assets/cards'), ('en', 'assets/en/cards')):
+    projects = [localized(p, lang) for p in PROJECTS]
+    os.makedirs(OUT, exist_ok=True)
+    for p in projects:
+        open(f"{OUT}/{p['id']}.svg", 'w', encoding='utf8').write(card(p))
+        for i, (kind, label, _) in enumerate(p['buttons']):
+            open(f"{OUT}/{p['id']}-{kind}.svg", 'w', encoding='utf8').write(button(p, kind, label, i == 0))
+
+    # the README block, two projects per row
+    rows = []
+    for i in range(0, len(projects), 2):
+        pair = projects[i:i + 2]
+        cards = '\n  '.join(f'<a href="{p["repo"]}"><img src="{OUT}/{p["id"]}.svg" width="49%" alt="{escape(p["name"])}"></a>' for p in pair)
+        btns = '\n  &nbsp;&nbsp;\n  '.join(' '.join(f'<a href="{u}"><img src="{OUT}/{p["id"]}-{k}.svg" width="23.5%" alt="{escape(p["name"])}: {escape(l)}"></a>' for k, l, u in p['buttons']) for p in pair)
+        rows.append(f'<p align="center">\n  {cards}\n  <br>\n  {btns}\n</p>')
+    open(f'tools/projects.{lang}.html', 'w', encoding='utf8').write('\n\n'.join(rows) + '\n')
 print('ok', len(PROJECTS), 'cards')

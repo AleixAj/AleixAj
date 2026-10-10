@@ -1,8 +1,10 @@
 """Technologies, career and education panels for the profile README (drawn as SVG: GitHub allows no CSS).
 
 Run from the repo root:  python tools/make_sections.py
+Writes the Spanish panels to assets/ and the English ones to assets/en/.
 Icons: Simple Icons (CC0), saved in tools/icons.
 """
+import os
 import re
 import textwrap
 from xml.sax.saxutils import escape
@@ -40,22 +42,24 @@ def frame(w, h, body, glow='88%'):
 
 # ---------- technologies ----------
 GROUPS = [
-    ('LENGUAJES', '#F7DF1E', [('javascript', 'JavaScript', '#F7DF1E'), ('typescript', 'TypeScript', '#3178C6'), ('php', 'PHP', '#8892BF'),
+    (('LENGUAJES', 'LANGUAGES'), '#F7DF1E', [('javascript', 'JavaScript', '#F7DF1E'), ('typescript', 'TypeScript', '#3178C6'), ('php', 'PHP', '#8892BF'),
                               ('mysql', 'SQL', '#4479A1'), ('html5', 'HTML', '#E34F26'), ('css', 'CSS', '#663399')]),
-    ('FRONTEND', '#61DAFB', [('react', 'React', '#61DAFB'), ('nextdotjs', 'Next.js', '#FFFFFF'), ('svelte', 'Svelte', '#FF3E00'),
+    (('FRONTEND', 'FRONTEND'), '#61DAFB', [('react', 'React', '#61DAFB'), ('nextdotjs', 'Next.js', '#FFFFFF'), ('svelte', 'Svelte', '#FF3E00'),
                              ('threedotjs', 'Three.js', '#FFFFFF'), ('tailwindcss', 'Tailwind CSS', '#06B6D4'), ('electron', 'Electron', '#47848F')]),
-    ('BACKEND Y DATOS', '#FF2D20', [('laravel', 'Laravel', '#FF2D20'), ('nodedotjs', 'Node.js', '#5FA04E'), ('postgresql', 'PostgreSQL', '#4169E1'),
+    (('BACKEND Y DATOS', 'BACKEND & DATA'), '#FF2D20', [('laravel', 'Laravel', '#FF2D20'), ('nodedotjs', 'Node.js', '#5FA04E'), ('postgresql', 'PostgreSQL', '#4169E1'),
                                     ('mysql', 'MySQL', '#4479A1'), ('supabase', 'Supabase', '#3FCF8E')]),
-    ('HERRAMIENTAS', '#A855F7', [('git', 'Git', '#F05032'), ('vite', 'Vite', '#9135FF'), ('vitest', 'Vitest', '#6E9F18'),
+    (('HERRAMIENTAS', 'TOOLS'), '#A855F7', [('git', 'Git', '#F05032'), ('vite', 'Vite', '#9135FF'), ('vitest', 'Vitest', '#6E9F18'),
                                  ('cloudflare', 'Cloudflare', '#F38020'), ('godotengine', 'Godot', '#478CBF'), ('claude', 'Claude Code', '#D97757')]),
 ]
 
 
-def stack():
+def stack(lang):
     W, H, colw, x0 = 1200, 500, 270, 48
-    out = ['  <text x="48" y="64" font-family="{}" font-size="30" font-weight="700" fill="#FFFFFF">Tecnologías</text>'.format(FONT),
-           f'  <text x="1152" y="62" text-anchor="end" font-family="{MONO}" font-size="14" fill="#94A3B8" letter-spacing="1.5">LO QUE USO CADA DÍA</text>']
-    for gi, (title, gc, items) in enumerate(GROUPS):
+    title, sub = ('Tecnologías', 'LO QUE USO CADA DÍA') if lang == 'es' else ('Tech stack', 'WHAT I USE EVERY DAY')
+    out = [f'  <text x="48" y="64" font-family="{FONT}" font-size="30" font-weight="700" fill="#FFFFFF">{title}</text>',
+           f'  <text x="1152" y="62" text-anchor="end" font-family="{MONO}" font-size="14" fill="#94A3B8" letter-spacing="1.5">{sub}</text>']
+    for gi, (titles, gc, items) in enumerate(GROUPS):
+        title = titles[lang == 'en']
         x = x0 + gi * (colw + 16)
         out.append(f'  <rect x="{x}" y="96" width="{colw}" height="{H - 132}" rx="18" fill="#0B1222" fill-opacity=".7" stroke="{gc}" stroke-opacity=".22"/>')
         out.append(f'  <rect x="{x + 20}" y="120" width="22" height="3" rx="1.5" fill="{gc}"/>')
@@ -110,7 +114,37 @@ def timeline(title, sub, rows):
     return frame(W, H, '\n'.join(out), glow='12%')
 
 
-open('assets/stack.svg', 'w', encoding='utf8').write(stack())
+CAREER_EN = [
+    ('JAN 2026 – NOW', 'Product development and training', 'Own projects',
+     'My own products from idea to production, above all Orbex, published on Google Play.'),
+    ('AUG 2025 – JAN 2026', 'Software Developer', 'Grup Romeu',
+     'Full-stack with PHP and JavaScript: an internal app to manage surgical equipment.'),
+    ('MAY 2023 – APR 2025', 'Software Developer', 'Nemon',
+     'Custom solutions for electricity and gas distributors on an in-house PHP framework.'),
+    ('NOV 2019 – APR 2023', 'Release Manager and Developer', 'VIEWNEXT',
+     'Releases for large companies: Salesforce (Nestlé), COPADO (CaixaBank) and Jenkins (Naturgy).'),
+    ('FEB – JUN 2018', 'Software Developer (internship)', 'C. R. Pantà de Riudecanyes',
+     '400 h maintaining and improving user management and database software.'),
+]
+EDUCATION_EN = [
+    ('MAY 2025', 'Frontend Developer Bootcamp', 'Lemoncoders', 'JavaScript, TypeScript, HTML, CSS and React.'),
+    ('JUL – SEP 2019', 'PHP Bootcamp', 'Fundació Esplai', '275 on-site hours: PHP and Laravel.'),
+    ('APR – JUN 2019', 'Java Bootcamp', 'Fundació Esplai', '275 on-site hours: Java and SQL.'),
+    ('2015 – 2018', 'Higher National Diploma in Web Development (DAW)', 'INS Baix Camp', 'Two-year higher vocational degree.'),
+    ('2008 – 2014', 'Secondary School and Technology Baccalaureate', 'INS Domènech i Montaner', ''),
+]
+
+
+def english(rows, texts):
+    # same colours as the Spanish rows, English text
+    return [(period, role, place, row[3], desc) for row, (period, role, place, desc) in zip(rows, texts)]
+
+
+open('assets/stack.svg', 'w', encoding='utf8').write(stack('es'))
 open('assets/career.svg', 'w', encoding='utf8').write(timeline('Trayectoria', 'MÁS DE 6 AÑOS EN PRODUCCIÓN', CAREER))
 open('assets/education.svg', 'w', encoding='utf8').write(timeline('Formación', 'TÉCNICO SUPERIOR · BOOTCAMPS', EDUCATION))
+os.makedirs('assets/en', exist_ok=True)
+open('assets/en/stack.svg', 'w', encoding='utf8').write(stack('en'))
+open('assets/en/career.svg', 'w', encoding='utf8').write(timeline('Experience', '6+ YEARS SHIPPING TO PRODUCTION', english(CAREER, CAREER_EN)))
+open('assets/en/education.svg', 'w', encoding='utf8').write(timeline('Education', 'HIGHER DIPLOMA · BOOTCAMPS', english(EDUCATION, EDUCATION_EN)))
 print('ok')
