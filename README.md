@@ -14,7 +14,7 @@
 
 ### About me
 
-Software developer with 6+ years of professional experience. I've worked with **PHP and JavaScript** on projects
+Software developer with 5+ years of professional experience. I've worked with **PHP and JavaScript** on projects
 ranging from custom solutions for electricity and gas distributors to full-stack internal apps. Now I take my own products **from idea
 to production**: a full-stack store, a game published on Google Play, an AI assistant for Windows and several
 deployed web apps.

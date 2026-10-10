@@ -162,14 +162,14 @@ def translated(rows, texts):
 
 
 open('assets/stack.svg', 'w', encoding='utf8').write(stack('es'))
-open('assets/career.svg', 'w', encoding='utf8').write(timeline('Trayectoria', 'MÁS DE 6 AÑOS EN PRODUCCIÓN', CAREER))
+open('assets/career.svg', 'w', encoding='utf8').write(timeline('Trayectoria', 'MÁS DE 5 AÑOS EN PRODUCCIÓN', CAREER))
 open('assets/education.svg', 'w', encoding='utf8').write(timeline('Formación', 'TÉCNICO SUPERIOR · BOOTCAMPS', EDUCATION))
 os.makedirs('assets/en', exist_ok=True)
 open('assets/en/stack.svg', 'w', encoding='utf8').write(stack('en'))
-open('assets/en/career.svg', 'w', encoding='utf8').write(timeline('Experience', '6+ YEARS SHIPPING TO PRODUCTION', translated(CAREER, CAREER_EN)))
+open('assets/en/career.svg', 'w', encoding='utf8').write(timeline('Experience', '5+ YEARS SHIPPING TO PRODUCTION', translated(CAREER, CAREER_EN)))
 open('assets/en/education.svg', 'w', encoding='utf8').write(timeline('Education', 'HIGHER VOCATIONAL DEGREE · BOOTCAMPS', translated(EDUCATION, EDUCATION_EN)))
 os.makedirs('assets/ca', exist_ok=True)
 open('assets/ca/stack.svg', 'w', encoding='utf8').write(stack('ca'))
-open('assets/ca/career.svg', 'w', encoding='utf8').write(timeline('Trajectòria', 'MÉS DE 6 ANYS EN PRODUCCIÓ', translated(CAREER, CAREER_CA)))
+open('assets/ca/career.svg', 'w', encoding='utf8').write(timeline('Trajectòria', 'MÉS DE 5 ANYS EN PRODUCCIÓ', translated(CAREER, CAREER_CA)))
 open('assets/ca/education.svg', 'w', encoding='utf8').write(timeline('Formació', 'TÈCNIC SUPERIOR · BOOTCAMPS', translated(EDUCATION, EDUCATION_CA)))
 print('ok')
