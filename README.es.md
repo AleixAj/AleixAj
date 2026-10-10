@@ -10,8 +10,8 @@
 
 ### Sobre mí
 
-Desarrollador de software con más de 6 años de experiencia profesional en **PHP y JavaScript**, desde soluciones a
-medida para distribuidoras de electricidad y gas hasta aplicaciones internas full-stack. Ahora llevo mis propios
+Desarrollador de software con más de 6 años de experiencia profesional, trabajando con **PHP y JavaScript**, desde
+soluciones a medida para distribuidoras de electricidad y gas hasta aplicaciones internas full-stack. Ahora llevo mis propios
 productos **de la idea a producción**: una tienda full-stack, un juego publicado en Google Play, un asistente de IA
 para Windows y varias apps web desplegadas.
 
