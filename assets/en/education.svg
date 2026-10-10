@@ -14,7 +14,7 @@
   </g>
   <rect x="1" y="1" width="1198" height="530" rx="24" fill="none" stroke="#22D3EE" stroke-opacity=".22" stroke-width="1.5"/>
   <text x="48" y="64" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF">Education</text>
-  <text x="1152" y="62" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" fill="#94A3B8" letter-spacing="1.5">HIGHER DIPLOMA · BOOTCAMPS</text>
+  <text x="1152" y="62" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" fill="#94A3B8" letter-spacing="1.5">HIGHER VOCATIONAL DEGREE · BOOTCAMPS</text>
   <rect x="279" y="116" width="2" height="372" fill="#334155"/>
   <text x="252" y="134" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#22D3EE" letter-spacing="1">MAY 2025</text>
   <circle cx="280" cy="129" r="13" fill="#22D3EE" fill-opacity=".15"/>
@@ -34,10 +34,10 @@
   <text x="252" y="398" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#A855F7" letter-spacing="1">2015 – 2018</text>
   <circle cx="280" cy="393" r="13" fill="#A855F7" fill-opacity=".15"/>
   <circle cx="280" cy="393" r="6" fill="#A855F7" stroke="#070B16" stroke-width="2"/>
-  <text x="312" y="400" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Higher National Diploma in Web Development (DAW)<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#A855F7" font-weight="600">INS Baix Camp</tspan></text>
-  <text x="312" y="428" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Two-year higher vocational degree.</text>
+  <text x="312" y="400" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Higher Technician in Web Application Development (DAW)<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#A855F7" font-weight="600">INS Baix Camp</tspan></text>
+  <text x="312" y="428" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Two-year higher vocational training programme.</text>
   <text x="252" y="486" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#64748B" letter-spacing="1">2008 – 2014</text>
   <circle cx="280" cy="481" r="13" fill="#64748B" fill-opacity=".15"/>
   <circle cx="280" cy="481" r="6" fill="#64748B" stroke="#070B16" stroke-width="2"/>
-  <text x="312" y="488" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Secondary School and Technology Baccalaureate<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#64748B" font-weight="600">INS Domènech i Montaner</tspan></text>
+  <text x="312" y="488" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Secondary Education and Technology Baccalaureate<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#64748B" font-weight="600">INS Domènech i Montaner</tspan></text>
 </svg>

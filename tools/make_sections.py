@@ -77,13 +77,13 @@ def stack(lang):
 CAREER = [
     ('ENE 2026 – HOY', 'Desarrollo de producto y formación', 'Proyectos propios', '#22D3EE',
      'Productos propios de la idea a producción, sobre todo Orbex, publicado en Google Play.'),
-    ('AGO 2025 – ENE 2026', 'Desarrollador de Software', 'Grup Romeu', '#A855F7',
+    ('AGO 2025 – ENE 2026', 'Desarrollador de software', 'Grup Romeu', '#A855F7',
      'Full-stack con PHP y JavaScript: aplicación interna para gestionar material quirúrgico.'),
-    ('MAY 2023 – ABR 2025', 'Desarrollador de Software', 'Nemon', '#F97316',
+    ('MAY 2023 – ABR 2025', 'Desarrollador de software', 'Nemon', '#F97316',
      'Soluciones a medida para distribuidoras de electricidad y gas sobre un framework propio en PHP.'),
     ('NOV 2019 – ABR 2023', 'Release Manager y Desarrollador', 'VIEWNEXT', '#3B82F6',
-     'Releases en grandes empresas: Salesforce (Nestlé), COPADO (CaixaBank) y Jenkins (Naturgy).'),
-    ('FEB – JUN 2018', 'Desarrollador de Software (prácticas)', 'C. R. Pantà de Riudecanyes', '#10B981',
+     'Releases en grandes empresas: Salesforce (Nestlé), Copado (CaixaBank) y Jenkins (Naturgy).'),
+    ('FEB – JUN 2018', 'Desarrollador de software (prácticas)', 'C. R. Pantà de Riudecanyes', '#10B981',
      '400 h manteniendo y mejorando software de gestión de usuarios y base de datos.'),
 ]
 EDUCATION = [
@@ -117,40 +117,40 @@ def timeline(title, sub, rows):
 
 CAREER_EN = [
     ('JAN 2026 – NOW', 'Product development and training', 'Own projects',
-     'My own products from idea to production, above all Orbex, published on Google Play.'),
+     'Taking my own products from idea to production, most notably Orbex, published on Google Play.'),
     ('AUG 2025 – JAN 2026', 'Software Developer', 'Grup Romeu',
-     'Full-stack with PHP and JavaScript: an internal app to manage surgical equipment.'),
+     'Full-stack development with PHP and JavaScript: an internal app for managing surgical equipment.'),
     ('MAY 2023 – APR 2025', 'Software Developer', 'Nemon',
-     'Custom solutions for electricity and gas distributors on an in-house PHP framework.'),
+     'Custom solutions for electricity and gas distributors, built on an in-house PHP framework.'),
     ('NOV 2019 – APR 2023', 'Release Manager and Developer', 'VIEWNEXT',
-     'Releases for large companies: Salesforce (Nestlé), COPADO (CaixaBank) and Jenkins (Naturgy).'),
+     'Release management for large clients: Salesforce (Nestlé), Copado (CaixaBank) and Jenkins (Naturgy).'),
     ('FEB – JUN 2018', 'Software Developer (internship)', 'C. R. Pantà de Riudecanyes',
-     '400 h maintaining and improving user management and database software.'),
+     '400 hours maintaining and improving user-management and database software.'),
 ]
 EDUCATION_EN = [
     ('MAY 2025', 'Frontend Developer Bootcamp', 'Lemoncoders', 'JavaScript, TypeScript, HTML, CSS and React.'),
     ('JUL – SEP 2019', 'PHP Bootcamp', 'Fundació Esplai', '275 on-site hours: PHP and Laravel.'),
     ('APR – JUN 2019', 'Java Bootcamp', 'Fundació Esplai', '275 on-site hours: Java and SQL.'),
-    ('2015 – 2018', 'Higher National Diploma in Web Development (DAW)', 'INS Baix Camp', 'Two-year higher vocational degree.'),
-    ('2008 – 2014', 'Secondary School and Technology Baccalaureate', 'INS Domènech i Montaner', ''),
+    ('2015 – 2018', 'Higher Technician in Web Application Development (DAW)', 'INS Baix Camp', 'Two-year higher vocational training programme.'),
+    ('2008 – 2014', 'Secondary Education and Technology Baccalaureate', 'INS Domènech i Montaner', ''),
 ]
 
 CAREER_CA = [
-    ('GEN 2026 – ARA', 'Desenvolupament de producte i formació', 'Projectes propis',
+    ('GEN. 2026 – ARA', 'Desenvolupament de producte i formació', 'Projectes propis',
      'Productes propis de la idea a producció, sobretot Orbex, publicat a Google Play.'),
-    ('AGO 2025 – GEN 2026', 'Desenvolupador de Software', 'Grup Romeu',
+    ('AG. 2025 – GEN. 2026', 'Desenvolupador de programari', 'Grup Romeu',
      'Full-stack amb PHP i JavaScript: aplicació interna per gestionar material quirúrgic.'),
-    ('MAI 2023 – ABR 2025', 'Desenvolupador de Software', 'Nemon',
+    ('MAIG 2023 – ABR. 2025', 'Desenvolupador de programari', 'Nemon',
      'Solucions a mida per a distribuïdores d’electricitat i gas sobre un framework propi en PHP.'),
-    ('NOV 2019 – ABR 2023', 'Release Manager i Desenvolupador', 'VIEWNEXT',
-     'Releases en grans empreses: Salesforce (Nestlé), COPADO (CaixaBank) i Jenkins (Naturgy).'),
-    ('FEB – JUN 2018', 'Desenvolupador de Software (pràctiques)', 'C. R. Pantà de Riudecanyes',
+    ('NOV. 2019 – ABR. 2023', 'Release Manager i desenvolupador', 'VIEWNEXT',
+     'Releases per a grans empreses: Salesforce (Nestlé), Copado (CaixaBank) i Jenkins (Naturgy).'),
+    ('FEBR. – JUNY 2018', 'Desenvolupador de programari (pràctiques)', 'C. R. Pantà de Riudecanyes',
      '400 h mantenint i millorant programari de gestió d’usuaris i base de dades.'),
 ]
 EDUCATION_CA = [
-    ('MAI 2025', 'Bootcamp Frontend Developer', 'Lemoncoders', 'JavaScript, TypeScript, HTML, CSS i React.'),
-    ('JUL – SET 2019', 'Bootcamp PHP', 'Fundació Esplai', '275 h presencials: PHP i Laravel.'),
-    ('ABR – JUN 2019', 'Bootcamp Java', 'Fundació Esplai', '275 h presencials: Java i SQL.'),
+    ('MAIG 2025', 'Bootcamp Frontend Developer', 'Lemoncoders', 'JavaScript, TypeScript, HTML, CSS i React.'),
+    ('JUL. – SET. 2019', 'Bootcamp PHP', 'Fundació Esplai', '275 h presencials: PHP i Laravel.'),
+    ('ABR. – JUNY 2019', 'Bootcamp Java', 'Fundació Esplai', '275 h presencials: Java i SQL.'),
     ('2015 – 2018', 'CFGS Desenvolupament d’Aplicacions Web (DAW)', 'INS Baix Camp', 'Cicle formatiu de grau superior.'),
     ('2008 – 2014', 'ESO i Batxillerat Tecnològic', 'INS Domènech i Montaner', ''),
 ]
@@ -167,7 +167,7 @@ open('assets/education.svg', 'w', encoding='utf8').write(timeline('Formación', 
 os.makedirs('assets/en', exist_ok=True)
 open('assets/en/stack.svg', 'w', encoding='utf8').write(stack('en'))
 open('assets/en/career.svg', 'w', encoding='utf8').write(timeline('Experience', '6+ YEARS SHIPPING TO PRODUCTION', translated(CAREER, CAREER_EN)))
-open('assets/en/education.svg', 'w', encoding='utf8').write(timeline('Education', 'HIGHER DIPLOMA · BOOTCAMPS', translated(EDUCATION, EDUCATION_EN)))
+open('assets/en/education.svg', 'w', encoding='utf8').write(timeline('Education', 'HIGHER VOCATIONAL DEGREE · BOOTCAMPS', translated(EDUCATION, EDUCATION_EN)))
 os.makedirs('assets/ca', exist_ok=True)
 open('assets/ca/stack.svg', 'w', encoding='utf8').write(stack('ca'))
 open('assets/ca/career.svg', 'w', encoding='utf8').write(timeline('Trajectòria', 'MÉS DE 6 ANYS EN PRODUCCIÓ', translated(CAREER, CAREER_CA)))

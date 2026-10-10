@@ -14,8 +14,8 @@
 
 ### Sobre mi
 
-Desenvolupador de software amb més de 6 anys d'experiència professional, treballant amb **PHP i JavaScript**, des de
-solucions a mida per a distribuïdores d'electricitat i gas fins a aplicacions internes full-stack. Ara porto els meus
+Desenvolupador de programari amb més de 6 anys d'experiència professional. He treballat amb **PHP i JavaScript** en
+projectes que van des de solucions a mida per a distribuïdores d'electricitat i gas fins a aplicacions internes full-stack. Ara porto els meus
 propis productes **de la idea a producció**: una botiga full-stack, un joc publicat a Google Play, un assistent d'IA
 per a Windows i diverses apps web desplegades.
 

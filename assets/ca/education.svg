@@ -16,17 +16,17 @@
   <text x="48" y="64" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF">Formació</text>
   <text x="1152" y="62" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" fill="#94A3B8" letter-spacing="1.5">TÈCNIC SUPERIOR · BOOTCAMPS</text>
   <rect x="279" y="116" width="2" height="372" fill="#334155"/>
-  <text x="252" y="134" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#22D3EE" letter-spacing="1">MAI 2025</text>
+  <text x="252" y="134" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#22D3EE" letter-spacing="1">MAIG 2025</text>
   <circle cx="280" cy="129" r="13" fill="#22D3EE" fill-opacity=".15"/>
   <circle cx="280" cy="129" r="6" fill="#22D3EE" stroke="#070B16" stroke-width="2"/>
   <text x="312" y="136" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Bootcamp Frontend Developer<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#22D3EE" font-weight="600">Lemoncoders</tspan></text>
   <text x="312" y="164" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">JavaScript, TypeScript, HTML, CSS i React.</text>
-  <text x="252" y="222" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#8892BF" letter-spacing="1">JUL – SET 2019</text>
+  <text x="252" y="222" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#8892BF" letter-spacing="1">JUL. – SET. 2019</text>
   <circle cx="280" cy="217" r="13" fill="#8892BF" fill-opacity=".15"/>
   <circle cx="280" cy="217" r="6" fill="#8892BF" stroke="#070B16" stroke-width="2"/>
   <text x="312" y="224" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Bootcamp PHP<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#8892BF" font-weight="600">Fundació Esplai</tspan></text>
   <text x="312" y="252" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">275 h presencials: PHP i Laravel.</text>
-  <text x="252" y="310" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#F97316" letter-spacing="1">ABR – JUN 2019</text>
+  <text x="252" y="310" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#F97316" letter-spacing="1">ABR. – JUNY 2019</text>
   <circle cx="280" cy="305" r="13" fill="#F97316" fill-opacity=".15"/>
   <circle cx="280" cy="305" r="6" fill="#F97316" stroke="#070B16" stroke-width="2"/>
   <text x="312" y="312" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Bootcamp Java<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#F97316" font-weight="600">Fundació Esplai</tspan></text>

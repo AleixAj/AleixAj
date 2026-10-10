@@ -14,12 +14,12 @@
 
 ### About me
 
-Software developer with 6+ years of professional experience, working with **PHP and JavaScript**, from custom
-solutions for electricity and gas distributors to full-stack internal apps. Now I take my own products **from idea
+Software developer with 6+ years of professional experience. I've worked with **PHP and JavaScript** on projects
+ranging from custom solutions for electricity and gas distributors to full-stack internal apps. Now I take my own products **from idea
 to production**: a full-stack store, a game published on Google Play, an AI assistant for Windows and several
 deployed web apps.
 
-I care about what a demo doesn't show: security, measured performance, tests, and a product that holds up in the
+I care about what a demo doesn't show: security, measured performance, tests and a product that holds up in the
 hands of real users.
 
 <br>
@@ -58,7 +58,7 @@ hands of real users.
 <p align="center">
   <img src="assets/en/stack.svg" width="100%" alt="Tech stack: JavaScript, TypeScript, PHP, SQL, HTML, CSS · React, Next.js, Svelte, Three.js, Tailwind CSS, Electron · Laravel, Node.js, PostgreSQL, MySQL, Supabase · Git, Vite, Vitest, Cloudflare, Godot, Claude Code"><br>
   <img src="assets/en/career.svg" width="100%" alt="Experience: own projects (2026 – now), Grup Romeu (2025 – 2026), Nemon (2023 – 2025), VIEWNEXT (2019 – 2023), internship at C. R. Pantà de Riudecanyes (2018)"><br>
-  <img src="assets/en/education.svg" width="100%" alt="Education: Frontend Bootcamp at Lemoncoders (2025), PHP and Java bootcamps at Fundació Esplai (2019), Higher Diploma in Web Development at INS Baix Camp (2015 – 2018), secondary school and Technology Baccalaureate (2008 – 2014)">
+  <img src="assets/en/education.svg" width="100%" alt="Education: Frontend Bootcamp at Lemoncoders (2025), PHP and Java bootcamps at Fundació Esplai (2019), Higher Technician in Web Application Development at INS Baix Camp (2015 – 2018), secondary education and Technology Baccalaureate (2008 – 2014)">
 </p>
 
 <p align="center"><b>Let’s talk</b></p>
