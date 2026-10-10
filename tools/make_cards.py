@@ -2,7 +2,7 @@
 
 Run from the repo root:  python tools/make_cards.py
 Writes assets/cards/<id>.svg and assets/cards/<id>-<button>.svg (Spanish),
-and the same under assets/en/cards (English).
+and the same under assets/en/cards (English) and assets/ca/cards (Catalan).
 """
 import base64
 import io
@@ -29,42 +29,60 @@ PROJECTS = [
          kind_en='FULL-STACK E-COMMERCE',
          desc_en=['Streetwear store with a Laravel catalogue, Sanctum', 'login, synced cart and real orders.'],
          tags=['React', 'TypeScript', 'Laravel', 'MySQL'], repo='https://github.com/AleixAj/obsidian',
+         kind_ca='E-COMMERCE FULL-STACK',
+         desc_ca=['Botiga de streetwear amb catàleg en Laravel, login', 'Sanctum, cistella sincronitzada i comandes reals.'],
          labels_en={'Ver demo': 'Live demo'},
+         labels_ca={'Ver demo': 'Veure demo'},
          buttons=[('demo', 'Ver demo', 'https://obsidian.aleixaj.com'), ('code', 'GitHub', 'https://github.com/AleixAj/obsidian')]),
     dict(id='orbex', name='Orbex', logo='orbex.png', accent='#A78BFA', kind='JUEGO MÓVIL · GOOGLE PLAY',
          desc=['Arcade estilo Zuma: 10 mundos y 80 niveles en pixel', 'art hecho a mano, ranking online y anti-trampas.'],
          kind_en='MOBILE GAME · GOOGLE PLAY',
          desc_en=['Zuma-style arcade: 10 worlds and 80 levels in', 'hand-made pixel art, online ranking and anti-cheat.'],
          tags=['Godot', 'GDScript', 'Supabase', 'PostgreSQL'], repo='https://github.com/AleixAj/orbex-web',
+         kind_ca='JOC MÒBIL · GOOGLE PLAY',
+         desc_ca=['Arcade estil Zuma: 10 mons i 80 nivells en pixel', 'art fet a mà, rànquing en línia i anti-trampes.'],
          labels_en={'Jugar': 'Play'},
+         labels_ca={},
          buttons=[('play', 'Google Play', 'https://play.google.com/store/apps/details?id=com.aleix.orbex'), ('game', 'Jugar', 'https://kylen02.itch.io/orbex')]),
     dict(id='nexus', name='NEXUS', logo='nexus.png', accent='#F97316', kind='ASISTENTE DE IA · WINDOWS',
          desc=['Agente con 46 herramientas, voz, frase de activación', 'sin conexión y fondo de escritorio animado.'],
          kind_en='AI ASSISTANT · WINDOWS',
          desc_en=['Agent with 46 tools, voice, offline wake word', 'and an animated desktop wallpaper.'],
          tags=['Electron', 'TypeScript', 'React', 'AI Agents'], repo='https://github.com/AleixAj/nexus',
+         kind_ca='ASSISTENT D’IA · WINDOWS',
+         desc_ca=['Agent amb 46 eines, veu, frase d’activació', 'sense connexió i fons d’escriptori animat.'],
          labels_en={'Descargar': 'Download'},
+         labels_ca={'Descargar': 'Descarregar'},
          buttons=[('download', 'Descargar', 'https://github.com/AleixAj/nexus/releases/latest/download/NEXUS-Setup.exe'), ('code', 'GitHub', 'https://github.com/AleixAj/nexus')]),
     dict(id='waymark', name='Waymark', logo='waymark.png', accent='#38BDF8', kind='FOTOS DE VIAJE EN 3D',
          desc=['Lee el GPS de tus fotos, detecta los viajes solo y', 'los pone en un globo 3D. Sin servidor.'],
          kind_en='TRAVEL PHOTOS IN 3D',
          desc_en=['Reads the GPS in your photos, finds your trips by', 'itself and puts them on a 3D globe. No server.'],
          tags=['SvelteKit', 'TypeScript', 'MapLibre', 'Web Workers'], repo='https://github.com/AleixAj/waymark',
+         kind_ca='FOTOS DE VIATGE EN 3D',
+         desc_ca=['Llegeix el GPS de les fotos, detecta els viatges', 'sol i els posa en un globus 3D. Sense servidor.'],
          labels_en={'Ver demo': 'Live demo'},
+         labels_ca={'Ver demo': 'Veure demo'},
          buttons=[('demo', 'Ver demo', 'https://waymark.aleixaj.com'), ('code', 'GitHub', 'https://github.com/AleixAj/waymark')]),
     dict(id='nadir', name='Nadir', logo='nadir.png', accent='#F0602C', kind='MONITOR DE PRECIOS',
          desc=['Compara tiendas, guarda el histórico y te avisa por', 'email cuando baja del precio que quieres.'],
          kind_en='PRICE TRACKER',
          desc_en=['Compares stores, keeps the price history and emails', 'you when it drops below your target price.'],
          tags=['Next.js', 'TypeScript', 'PostgreSQL', 'Drizzle'], repo='https://github.com/AleixAj/nadir',
+         kind_ca='MONITOR DE PREUS',
+         desc_ca=['Compara botigues, guarda l’històric i t’avisa per', 'correu quan baixa del preu que vols.'],
          labels_en={'Ver demo': 'Live demo'},
+         labels_ca={'Ver demo': 'Veure demo'},
          buttons=[('demo', 'Ver demo', 'https://nadir.aleixaj.com'), ('code', 'GitHub', 'https://github.com/AleixAj/nadir')]),
     dict(id='kylenchat', name='Kylen Chat', logo='kylenchat.png', accent='#A970FF', kind='APP PARA STREAMERS',
          desc=['El chat de Twitch transparente encima del juego,', 'con emotes de 7TV, BTTV y FFZ y perfiles por juego.'],
          kind_en='APP FOR STREAMERS',
          desc_en=['Transparent Twitch chat on top of your game, with', '7TV, BTTV and FFZ emotes and per-game profiles.'],
          tags=['Electron', 'JavaScript', 'Node.js', 'WebSocket'], repo='https://github.com/AleixAj/kylenchat',
+         kind_ca='APP PER A STREAMERS',
+         desc_ca=['El xat de Twitch transparent damunt del joc, amb', 'emotes de 7TV, BTTV i FFZ i perfils per joc.'],
          labels_en={'Descargar': 'Download'},
+         labels_ca={'Descargar': 'Descarregar'},
          buttons=[('download', 'Descargar', 'https://github.com/AleixAj/kylenchat/releases/latest/download/KylenChat-Setup.exe'), ('code', 'GitHub', 'https://github.com/AleixAj/kylenchat')]),
 ]
 
@@ -173,12 +191,12 @@ def button(p, kind, label, primary):
 def localized(p, lang):
     if lang == 'es':
         return p
-    labels = p['labels_en']
-    return dict(p, kind=p['kind_en'], desc=p['desc_en'],
+    labels = p[f'labels_{lang}']
+    return dict(p, kind=p[f'kind_{lang}'], desc=p[f'desc_{lang}'],
                 buttons=[(k, labels.get(l, l), u) for k, l, u in p['buttons']])
 
 
-for lang, OUT in (('es', 'assets/cards'), ('en', 'assets/en/cards')):
+for lang, OUT in (('es', 'assets/cards'), ('en', 'assets/en/cards'), ('ca', 'assets/ca/cards')):
     projects = [localized(p, lang) for p in PROJECTS]
     os.makedirs(OUT, exist_ok=True)
     for p in projects:

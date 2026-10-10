@@ -1,7 +1,7 @@
 """Technologies, career and education panels for the profile README (drawn as SVG: GitHub allows no CSS).
 
 Run from the repo root:  python tools/make_sections.py
-Writes the Spanish panels to assets/ and the English ones to assets/en/.
+Writes the Spanish panels to assets/, the English ones to assets/en/ and the Catalan ones to assets/ca/.
 Icons: Simple Icons (CC0), saved in tools/icons.
 """
 import os
@@ -42,24 +42,25 @@ def frame(w, h, body, glow='88%'):
 
 # ---------- technologies ----------
 GROUPS = [
-    (('LENGUAJES', 'LANGUAGES'), '#F7DF1E', [('javascript', 'JavaScript', '#F7DF1E'), ('typescript', 'TypeScript', '#3178C6'), ('php', 'PHP', '#8892BF'),
+    (('LENGUAJES', 'LANGUAGES', 'LLENGUATGES'), '#F7DF1E', [('javascript', 'JavaScript', '#F7DF1E'), ('typescript', 'TypeScript', '#3178C6'), ('php', 'PHP', '#8892BF'),
                               ('mysql', 'SQL', '#4479A1'), ('html5', 'HTML', '#E34F26'), ('css', 'CSS', '#663399')]),
-    (('FRONTEND', 'FRONTEND'), '#61DAFB', [('react', 'React', '#61DAFB'), ('nextdotjs', 'Next.js', '#FFFFFF'), ('svelte', 'Svelte', '#FF3E00'),
+    (('FRONTEND', 'FRONTEND', 'FRONTEND'), '#61DAFB', [('react', 'React', '#61DAFB'), ('nextdotjs', 'Next.js', '#FFFFFF'), ('svelte', 'Svelte', '#FF3E00'),
                              ('threedotjs', 'Three.js', '#FFFFFF'), ('tailwindcss', 'Tailwind CSS', '#06B6D4'), ('electron', 'Electron', '#47848F')]),
-    (('BACKEND Y DATOS', 'BACKEND & DATA'), '#FF2D20', [('laravel', 'Laravel', '#FF2D20'), ('nodedotjs', 'Node.js', '#5FA04E'), ('postgresql', 'PostgreSQL', '#4169E1'),
+    (('BACKEND Y DATOS', 'BACKEND & DATA', 'BACKEND I DADES'), '#FF2D20', [('laravel', 'Laravel', '#FF2D20'), ('nodedotjs', 'Node.js', '#5FA04E'), ('postgresql', 'PostgreSQL', '#4169E1'),
                                     ('mysql', 'MySQL', '#4479A1'), ('supabase', 'Supabase', '#3FCF8E')]),
-    (('HERRAMIENTAS', 'TOOLS'), '#A855F7', [('git', 'Git', '#F05032'), ('vite', 'Vite', '#9135FF'), ('vitest', 'Vitest', '#6E9F18'),
+    (('HERRAMIENTAS', 'TOOLS', 'EINES'), '#A855F7', [('git', 'Git', '#F05032'), ('vite', 'Vite', '#9135FF'), ('vitest', 'Vitest', '#6E9F18'),
                                  ('cloudflare', 'Cloudflare', '#F38020'), ('godotengine', 'Godot', '#478CBF'), ('claude', 'Claude Code', '#D97757')]),
 ]
 
 
 def stack(lang):
     W, H, colw, x0 = 1200, 500, 270, 48
-    title, sub = ('Tecnologías', 'LO QUE USO CADA DÍA') if lang == 'es' else ('Tech stack', 'WHAT I USE EVERY DAY')
+    title, sub = {'es': ('Tecnologías', 'LO QUE USO CADA DÍA'), 'en': ('Tech stack', 'WHAT I USE EVERY DAY'),
+                  'ca': ('Tecnologies', 'EL QUE FAIG SERVIR CADA DIA')}[lang]
     out = [f'  <text x="48" y="64" font-family="{FONT}" font-size="30" font-weight="700" fill="#FFFFFF">{title}</text>',
            f'  <text x="1152" y="62" text-anchor="end" font-family="{MONO}" font-size="14" fill="#94A3B8" letter-spacing="1.5">{sub}</text>']
     for gi, (titles, gc, items) in enumerate(GROUPS):
-        title = titles[lang == 'en']
+        title = titles[('es', 'en', 'ca').index(lang)]
         x = x0 + gi * (colw + 16)
         out.append(f'  <rect x="{x}" y="96" width="{colw}" height="{H - 132}" rx="18" fill="#0B1222" fill-opacity=".7" stroke="{gc}" stroke-opacity=".22"/>')
         out.append(f'  <rect x="{x + 20}" y="120" width="22" height="3" rx="1.5" fill="{gc}"/>')
@@ -134,9 +135,29 @@ EDUCATION_EN = [
     ('2008 – 2014', 'Secondary School and Technology Baccalaureate', 'INS Domènech i Montaner', ''),
 ]
 
+CAREER_CA = [
+    ('GEN 2026 – ARA', 'Desenvolupament de producte i formació', 'Projectes propis',
+     'Productes propis de la idea a producció, sobretot Orbex, publicat a Google Play.'),
+    ('AGO 2025 – GEN 2026', 'Desenvolupador de Software', 'Grup Romeu',
+     'Full-stack amb PHP i JavaScript: aplicació interna per gestionar material quirúrgic.'),
+    ('MAI 2023 – ABR 2025', 'Desenvolupador de Software', 'Nemon',
+     'Solucions a mida per a distribuïdores d’electricitat i gas sobre un framework propi en PHP.'),
+    ('NOV 2019 – ABR 2023', 'Release Manager i Desenvolupador', 'VIEWNEXT',
+     'Releases en grans empreses: Salesforce (Nestlé), COPADO (CaixaBank) i Jenkins (Naturgy).'),
+    ('FEB – JUN 2018', 'Desenvolupador de Software (pràctiques)', 'C. R. Pantà de Riudecanyes',
+     '400 h mantenint i millorant programari de gestió d’usuaris i base de dades.'),
+]
+EDUCATION_CA = [
+    ('MAI 2025', 'Bootcamp Frontend Developer', 'Lemoncoders', 'JavaScript, TypeScript, HTML, CSS i React.'),
+    ('JUL – SET 2019', 'Bootcamp PHP', 'Fundació Esplai', '275 h presencials: PHP i Laravel.'),
+    ('ABR – JUN 2019', 'Bootcamp Java', 'Fundació Esplai', '275 h presencials: Java i SQL.'),
+    ('2015 – 2018', 'CFGS Desenvolupament d’Aplicacions Web (DAW)', 'INS Baix Camp', 'Cicle formatiu de grau superior.'),
+    ('2008 – 2014', 'ESO i Batxillerat Tecnològic', 'INS Domènech i Montaner', ''),
+]
 
-def english(rows, texts):
-    # same colours as the Spanish rows, English text
+
+def translated(rows, texts):
+    # same colours as the Spanish rows, translated text
     return [(period, role, place, row[3], desc) for row, (period, role, place, desc) in zip(rows, texts)]
 
 
@@ -145,6 +166,10 @@ open('assets/career.svg', 'w', encoding='utf8').write(timeline('Trayectoria', 'M
 open('assets/education.svg', 'w', encoding='utf8').write(timeline('Formación', 'TÉCNICO SUPERIOR · BOOTCAMPS', EDUCATION))
 os.makedirs('assets/en', exist_ok=True)
 open('assets/en/stack.svg', 'w', encoding='utf8').write(stack('en'))
-open('assets/en/career.svg', 'w', encoding='utf8').write(timeline('Experience', '6+ YEARS SHIPPING TO PRODUCTION', english(CAREER, CAREER_EN)))
-open('assets/en/education.svg', 'w', encoding='utf8').write(timeline('Education', 'HIGHER DIPLOMA · BOOTCAMPS', english(EDUCATION, EDUCATION_EN)))
+open('assets/en/career.svg', 'w', encoding='utf8').write(timeline('Experience', '6+ YEARS SHIPPING TO PRODUCTION', translated(CAREER, CAREER_EN)))
+open('assets/en/education.svg', 'w', encoding='utf8').write(timeline('Education', 'HIGHER DIPLOMA · BOOTCAMPS', translated(EDUCATION, EDUCATION_EN)))
+os.makedirs('assets/ca', exist_ok=True)
+open('assets/ca/stack.svg', 'w', encoding='utf8').write(stack('ca'))
+open('assets/ca/career.svg', 'w', encoding='utf8').write(timeline('Trajectòria', 'MÉS DE 6 ANYS EN PRODUCCIÓ', translated(CAREER, CAREER_CA)))
+open('assets/ca/education.svg', 'w', encoding='utf8').write(timeline('Formació', 'TÈCNIC SUPERIOR · BOOTCAMPS', translated(EDUCATION, EDUCATION_CA)))
 print('ok')

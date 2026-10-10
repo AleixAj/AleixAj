@@ -1,4 +1,8 @@
-<p align="right"><a href="README.md">English</a> · <b>Español</b></p>
+<p align="center">
+  <a href="README.md"><img src="assets/lang-en.svg" alt="View in English" width="180"></a>
+  <a href="README.es.md"><img src="assets/lang-es-on.svg" alt="Español (seleccionado)" width="180"></a>
+  <a href="README.ca.md"><img src="assets/lang-ca.svg" alt="Veure en català" width="180"></a>
+</p>
 
 <a href="https://aleixaj.com"><img src="assets/header.svg" alt="Aleix Auqué · Software Developer · Full-stack" width="100%"></a>
 

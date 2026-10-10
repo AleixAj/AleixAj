@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="556" viewBox="0 0 1200 556">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0D1424"/><stop offset="1" stop-color="#070B16"/></linearGradient>
+    <radialGradient id="g1" cx="12%" cy="0%" r="60%"><stop offset="0" stop-color="#22D3EE" stop-opacity=".16"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g2" cx="0%" cy="100%" r="55%"><stop offset="0" stop-color="#A855F7" stop-opacity=".12"/><stop offset="1" stop-color="#A855F7" stop-opacity="0"/></radialGradient>
+    <linearGradient id="edge" x1="0" x2="1"><stop offset="0" stop-color="#22D3EE" stop-opacity="0"/><stop offset=".5" stop-color="#22D3EE"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#fff" stroke-opacity=".03"/></pattern>
+    <clipPath id="c"><rect x="1" y="1" width="1198" height="554" rx="24"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="1200" height="556" fill="url(#bg)"/><rect width="1200" height="556" fill="url(#grid)"/>
+    <rect width="1200" height="556" fill="url(#g1)"/><rect width="1200" height="556" fill="url(#g2)"/>
+    <rect x="120" y="0" width="960" height="2" fill="url(#edge)"/>
+  </g>
+  <rect x="1" y="1" width="1198" height="554" rx="24" fill="none" stroke="#22D3EE" stroke-opacity=".22" stroke-width="1.5"/>
+  <text x="48" y="64" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF">Trajectòria</text>
+  <text x="1152" y="62" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" fill="#94A3B8" letter-spacing="1.5">MÉS DE 6 ANYS EN PRODUCCIÓ</text>
+  <rect x="279" y="116" width="2" height="372" fill="#334155"/>
+  <text x="252" y="134" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#22D3EE" letter-spacing="1">GEN 2026 – ARA</text>
+  <circle cx="280" cy="129" r="13" fill="#22D3EE" fill-opacity=".15"/>
+  <circle cx="280" cy="129" r="6" fill="#22D3EE" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="136" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Desenvolupament de producte i formació<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#22D3EE" font-weight="600">Projectes propis</tspan></text>
+  <text x="312" y="164" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Productes propis de la idea a producció, sobretot Orbex, publicat a Google Play.</text>
+  <text x="252" y="222" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#A855F7" letter-spacing="1">AGO 2025 – GEN 2026</text>
+  <circle cx="280" cy="217" r="13" fill="#A855F7" fill-opacity=".15"/>
+  <circle cx="280" cy="217" r="6" fill="#A855F7" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="224" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Desenvolupador de Software<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#A855F7" font-weight="600">Grup Romeu</tspan></text>
+  <text x="312" y="252" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Full-stack amb PHP i JavaScript: aplicació interna per gestionar material quirúrgic.</text>
+  <text x="252" y="310" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#F97316" letter-spacing="1">MAI 2023 – ABR 2025</text>
+  <circle cx="280" cy="305" r="13" fill="#F97316" fill-opacity=".15"/>
+  <circle cx="280" cy="305" r="6" fill="#F97316" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="312" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Desenvolupador de Software<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#F97316" font-weight="600">Nemon</tspan></text>
+  <text x="312" y="340" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Solucions a mida per a distribuïdores d’electricitat i gas sobre un framework propi en PHP.</text>
+  <text x="252" y="398" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#3B82F6" letter-spacing="1">NOV 2019 – ABR 2023</text>
+  <circle cx="280" cy="393" r="13" fill="#3B82F6" fill-opacity=".15"/>
+  <circle cx="280" cy="393" r="6" fill="#3B82F6" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="400" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Release Manager i Desenvolupador<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#3B82F6" font-weight="600">VIEWNEXT</tspan></text>
+  <text x="312" y="428" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Releases en grans empreses: Salesforce (Nestlé), COPADO (CaixaBank) i Jenkins (Naturgy).</text>
+  <text x="252" y="486" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#10B981" letter-spacing="1">FEB – JUN 2018</text>
+  <circle cx="280" cy="481" r="13" fill="#10B981" fill-opacity=".15"/>
+  <circle cx="280" cy="481" r="6" fill="#10B981" stroke="#070B16" stroke-width="2"/>
+  <text x="312" y="488" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Desenvolupador de Software (pràctiques)<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#10B981" font-weight="600">C. R. Pantà de Riudecanyes</tspan></text>
+  <text x="312" y="516" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">400 h mantenint i millorant programari de gestió d’usuaris i base de dades.</text>
+</svg>
