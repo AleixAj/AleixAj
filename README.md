@@ -14,10 +14,14 @@
 
 ### About me
 
-Software developer with 5+ years of professional experience. I've worked with **PHP and JavaScript** on projects
-ranging from custom solutions for electricity and gas distributors to full-stack internal apps. Now I take my own products **from idea
-to production**: a full-stack store, a game published on Google Play, an AI assistant for Windows and several
-deployed web apps.
+Full-stack software developer with 5+ years of professional experience. My core is **PHP and JavaScript**, but
+I'm not limited to them: I regularly work with **TypeScript, React, Next.js, Laravel, Node.js and SQL**, and I've
+shipped projects with **SvelteKit, Electron, Supabase and Godot**.
+
+Professionally, I've built custom solutions for electricity and gas distributors, as well as full-stack internal
+apps. I've also managed releases and deployments for clients such as Nestlé, CaixaBank or Naturgy. Today I take my own products
+**from idea to production**: a full-stack store, a game published on Google Play, an AI assistant for Windows and
+several deployed web apps.
 
 I care about what a demo doesn't show: security, measured performance, tests and a product that holds up in the
 hands of real users.

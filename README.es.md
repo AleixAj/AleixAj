@@ -14,10 +14,15 @@
 
 ### Sobre mí
 
-Desarrollador de software con más de 5 años de experiencia profesional. He trabajado con **PHP y JavaScript** en
-proyectos que van desde soluciones a medida para distribuidoras de electricidad y gas hasta aplicaciones internas full-stack. Ahora llevo mis propios
-productos **de la idea a producción**: una tienda full-stack, un juego publicado en Google Play, un asistente de IA
-para Windows y varias apps web desplegadas.
+Desarrollador de software full-stack con más de 5 años de experiencia profesional. Mi base son **PHP y
+JavaScript**, pero no me limito a ellos: trabajo habitualmente con **TypeScript, React, Next.js, Laravel, Node.js y
+SQL**, y he publicado proyectos con **SvelteKit, Electron, Supabase y Godot**.
+
+En el ámbito profesional he desarrollado soluciones a medida para distribuidoras de electricidad y gas, además de
+aplicaciones internas full-stack. También he gestionado releases y despliegues para clientes como Nestlé, CaixaBank o
+Naturgy. Hoy llevo
+mis propios productos **de la idea a producción**: una tienda full-stack, un juego publicado en Google Play, un
+asistente de IA para Windows y varias apps web desplegadas.
 
 Me importa lo que no se ve en una demo: la seguridad, el rendimiento medido, los tests y que el producto aguante en
 manos de usuarios reales.
