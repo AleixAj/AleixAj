@@ -4,7 +4,6 @@ Run from the repo root:  python tools/make_lang.py
 Writes assets/lang-<en|es|ca>.svg (not selected) and assets/lang-<en|es|ca>-on.svg (selected).
 """
 FONT = "'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif"
-MONO = "'JetBrains Mono', Consolas, 'SFMono-Regular', monospace"
 
 # 36x24 flags, drawn at the origin
 FLAGS = {
@@ -29,21 +28,21 @@ FLAGS = {
       <path d="M0 4H36M0 9.33H36M0 14.67H36M0 20H36" stroke="#DA121A" stroke-width="2.67"/>
     </g>''',
 }
-NAMES = {'en': ('English', 'EN'), 'es': ('Español', 'ES'), 'ca': ('Català', 'CA')}
+NAMES = {'en': 'English', 'es': 'Español', 'ca': 'Català'}
 
 
 def button(lang, on):
     W, H = 220, 64
-    name, code = NAMES[lang]
+    name = NAMES[lang]
     if on:
         border = '<rect x="5" y="5" width="210" height="54" rx="27" fill="none" stroke="url(#ac)" stroke-width="2"/>'
         shadow = '<filter id="sh" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#22d3ee" flood-opacity=".35"/></filter>'
-        body, ink, sub = 'url(#bg)', '#FFFFFF', '#22D3EE'
+        body, ink = 'url(#bg)', '#FFFFFF'
         mark = '<circle cx="186" cy="32" r="9" fill="url(#ac)"/><path d="M182 32.2l2.8 2.8 5.2-5.6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
     else:
         border = '<rect x="5" y="5" width="210" height="54" rx="27" fill="none" stroke="#334155" stroke-width="1.5"/>'
         shadow = ''
-        body, ink, sub = '#0B1222', '#CBD5E1', '#64748B'
+        body, ink = '#0B1222', '#CBD5E1'
         mark = '<path d="M183 26l6 6-6 6" fill="none" stroke="#64748B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>'
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <defs>
@@ -57,8 +56,7 @@ def button(lang, on):
     {FLAGS[lang]}
     <rect width="36" height="24" rx="5" fill="none" stroke="#fff" stroke-opacity=".25"/>
   </g>
-  <text x="72" y="31" font-family="{FONT}" font-size="17" font-weight="700" fill="{ink}">{name}</text>
-  <text x="72" y="48" font-family="{MONO}" font-size="11" font-weight="700" fill="{sub}" letter-spacing="2">{code}</text>
+  <text x="72" y="38" font-family="{FONT}" font-size="18" font-weight="700" fill="{ink}">{name}</text>
   {mark}
 </svg>
 '''
