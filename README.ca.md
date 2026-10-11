@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="README.md"><img src="assets/lang-en.svg" alt="View in English" width="180"></a>
-  <a href="README.es.md"><img src="assets/lang-es.svg" alt="Ver en español" width="180"></a>
+  <a href="README.md"><img src="assets/lang-es.svg" alt="Ver en español" width="180"></a>
+  <a href="README.en.md"><img src="assets/lang-en.svg" alt="View in English" width="180"></a>
   <a href="README.ca.md"><img src="assets/lang-ca-on.svg" alt="Català (seleccionat)" width="180"></a>
 </p>
 
