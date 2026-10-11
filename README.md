@@ -19,7 +19,7 @@ I'm not limited to them: I regularly work with **TypeScript, React, Next.js, Lar
 shipped projects with **SvelteKit, Electron, Supabase and Godot**.
 
 Professionally, I've built custom solutions for electricity and gas distributors, as well as full-stack internal
-apps. I've also managed releases and deployments for clients such as Nestlé, CaixaBank or Naturgy. Today I take my own products
+apps. I've also managed releases and deployments for clients such as Nestlé, CaixaBank and Naturgy. Today I take my own products
 **from idea to production**: a full-stack store, a game published on Google Play, an AI assistant for Windows and
 several deployed web apps.
 
