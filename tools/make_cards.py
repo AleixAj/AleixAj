@@ -20,7 +20,7 @@ TECH = {
     'Godot': '#6FA8DC', 'Supabase': '#3FCF8E', 'PostgreSQL': '#7A9CF0', 'Electron': '#7CC4D0',
     'AI Agents': '#FB923C', 'SvelteKit': '#FF6A3D', 'MapLibre': '#38BDF8', 'Web Workers': '#A78BFA',
     'Next.js': '#E5E7EB', 'Drizzle': '#C5F74F', 'JavaScript': '#F7DF1E', 'Node.js': '#7CC46A',
-    'WebSocket': '#C4B5FD', 'GDScript': '#9DB8E0',
+    'WebSocket': '#C4B5FD', 'GDScript': '#9DB8E0', 'Python': '#FFD43B',
 }
 
 PROJECTS = [
@@ -38,7 +38,7 @@ PROJECTS = [
          desc=['Arcade estilo Zuma: 10 mundos y 80 niveles en pixel', 'art hecho a mano, ranking online y antitrampas.'],
          kind_en='MOBILE GAME · GOOGLE PLAY',
          desc_en=['Zuma-style arcade: 10 worlds and 80 levels in', 'handmade pixel art, online leaderboard and anti-cheat.'],
-         tags=['Godot', 'GDScript', 'Supabase', 'PostgreSQL'], repo='https://github.com/AleixAj/orbex-web',
+         tags=['Godot', 'GDScript', 'Python', 'Supabase', 'PostgreSQL'], repo='https://github.com/AleixAj/orbex-web',
          kind_ca='JOC MÒBIL · GOOGLE PLAY',
          desc_ca=['Arcade estil Zuma: 10 mons i 80 nivells en pixel', 'art fet a mà, rànquing en línia i antitrampes.'],
          labels_en={'Jugar': 'Play'},

@@ -42,7 +42,7 @@ def frame(w, h, body, glow='88%'):
 
 # ---------- technologies ----------
 GROUPS = [
-    (('LENGUAJES', 'LANGUAGES', 'LLENGUATGES'), '#F7DF1E', [('javascript', 'JavaScript', '#F7DF1E'), ('typescript', 'TypeScript', '#3178C6'), ('php', 'PHP', '#8892BF'),
+    (('LENGUAJES', 'LANGUAGES', 'LLENGUATGES'), '#F7DF1E', [('javascript', 'JavaScript', '#F7DF1E'), ('typescript', 'TypeScript', '#3178C6'), ('php', 'PHP', '#8892BF'), ('python', 'Python', '#3776AB'),
                               ('mysql', 'SQL', '#4479A1'), ('html5', 'HTML', '#E34F26'), ('css', 'CSS', '#663399')]),
     (('FRONTEND', 'FRONTEND', 'FRONTEND'), '#61DAFB', [('react', 'React', '#61DAFB'), ('nextdotjs', 'Next.js', '#FFFFFF'), ('svelte', 'Svelte', '#FF3E00'),
                              ('threedotjs', 'Three.js', '#FFFFFF'), ('tailwindcss', 'Tailwind CSS', '#06B6D4'), ('electron', 'Electron', '#47848F')]),
@@ -54,7 +54,7 @@ GROUPS = [
 
 
 def stack(lang):
-    W, H, colw, x0 = 1200, 500, 270, 48
+    W, H, colw, x0 = 1200, 544, 270, 48
     title, sub = {'es': ('Tecnologías', 'LO QUE USO CADA DÍA'), 'en': ('Tech stack', 'WHAT I USE EVERY DAY'),
                   'ca': ('Tecnologies', 'EL QUE FAIG SERVIR CADA DIA')}[lang]
     out = [f'  <text x="48" y="64" font-family="{FONT}" font-size="30" font-weight="700" fill="#FFFFFF">{title}</text>',

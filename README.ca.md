@@ -61,7 +61,7 @@ mans d'usuaris reals.
 <p align="center"><sub>Més projectes, amb captures i detalls tècnics, a <a href="https://aleixaj.com"><b>aleixaj.com</b></a></sub></p>
 
 <p align="center">
-  <img src="assets/ca/stack.svg" width="100%" alt="Tecnologies: JavaScript, TypeScript, PHP, SQL, HTML, CSS · React, Next.js, Svelte, Three.js, Tailwind CSS, Electron · Laravel, Node.js, PostgreSQL, MySQL, Supabase · Git, Vite, Vitest, Cloudflare, Godot, Claude Code"><br>
+  <img src="assets/ca/stack.svg" width="100%" alt="Tecnologies: JavaScript, TypeScript, PHP, Python, SQL, HTML, CSS · React, Next.js, Svelte, Three.js, Tailwind CSS, Electron · Laravel, Node.js, PostgreSQL, MySQL, Supabase · Git, Vite, Vitest, Cloudflare, Godot, Claude Code"><br>
   <img src="assets/ca/career.svg" width="100%" alt="Trajectòria: projectes propis (2026 – ara), Grup Romeu (2025 – 2026), Nemon (2023 – 2025), VIEWNEXT (2019 – 2023), pràctiques a C. R. Pantà de Riudecanyes (2018)"><br>
   <img src="assets/ca/education.svg" width="100%" alt="Formació: Bootcamp Frontend a Lemoncoders (2025), bootcamps de PHP i Java a Fundació Esplai (2019), CFGS DAW a INS Baix Camp (2015 – 2018), ESO i Batxillerat Tecnològic (2008 – 2014)">
 </p>

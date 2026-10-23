@@ -60,7 +60,7 @@ hands of real users.
 <p align="center"><sub>More projects, with screenshots and technical details, at <a href="https://aleixaj.com"><b>aleixaj.com</b></a></sub></p>
 
 <p align="center">
-  <img src="assets/en/stack.svg" width="100%" alt="Tech stack: JavaScript, TypeScript, PHP, SQL, HTML, CSS · React, Next.js, Svelte, Three.js, Tailwind CSS, Electron · Laravel, Node.js, PostgreSQL, MySQL, Supabase · Git, Vite, Vitest, Cloudflare, Godot, Claude Code"><br>
+  <img src="assets/en/stack.svg" width="100%" alt="Tech stack: JavaScript, TypeScript, PHP, Python, SQL, HTML, CSS · React, Next.js, Svelte, Three.js, Tailwind CSS, Electron · Laravel, Node.js, PostgreSQL, MySQL, Supabase · Git, Vite, Vitest, Cloudflare, Godot, Claude Code"><br>
   <img src="assets/en/career.svg" width="100%" alt="Experience: own projects (2026 – now), Grup Romeu (2025 – 2026), Nemon (2023 – 2025), VIEWNEXT (2019 – 2023), internship at C. R. Pantà de Riudecanyes (2018)"><br>
   <img src="assets/en/education.svg" width="100%" alt="Education: Frontend Bootcamp at Lemoncoders (2025), PHP and Java bootcamps at Fundació Esplai (2019), Higher Technician in Web Application Development at INS Baix Camp (2015 – 2018), secondary education and Technology Baccalaureate (2008 – 2014)">
 </p>
