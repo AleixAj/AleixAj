@@ -133,7 +133,7 @@ def card(p):
     d = ImageDraw.Draw(img)
     tx = lx + tile + 48 * S
     d.text((tx, 186 * S), p['name'], font=font(BOLD, 82), fill='#FFFFFF', anchor='ls')
-    tracked(d, (tx + 2 * S, 206 * S), p['kind'], font(MONOB, 27), accent, 3)
+    tracked(d, (tx + 2 * S, 206 * S), p['kind'].upper(), font(MONOB, 27), accent, 3)
     for i, line in enumerate(p['desc']):
         d.text((84 * S, (312 + i * 46) * S), line, font=font(BOOK, 34), fill='#CBD5E1', anchor='ls')
     d.text((84 * S, 548 * S), p['repo'].replace('https://', ''), font=font(MONO, 26), fill='#64748B', anchor='ls')

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="396" viewBox="0 0 420 396">
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="424" viewBox="0 0 420 424">
   <defs>
     <radialGradient id="glow" cx="50%" cy="22%" r="62%">
       <stop offset="0" stop-color="#22d3ee" stop-opacity=".34"/>
@@ -23,13 +23,13 @@
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
       <path d="M32 0H0V32" fill="none" stroke="#22d3ee" stroke-opacity=".06"/>
     </pattern>
-    <clipPath id="frame"><rect width="420" height="396" rx="22"/></clipPath>
+    <clipPath id="frame"><rect width="420" height="424" rx="22"/></clipPath>
   </defs>
   <g clip-path="url(#frame)">
-    <rect width="420" height="396" fill="#020617"/>
-    <rect width="420" height="396" fill="url(#grid)"/>
-    <rect width="420" height="396" fill="url(#glow)"/>
-    <rect width="420" height="396" fill="url(#violet)"/>
+    <rect width="420" height="424" fill="#020617"/>
+    <rect width="420" height="424" fill="url(#grid)"/>
+    <rect width="420" height="424" fill="url(#glow)"/>
+    <rect width="420" height="424" fill="url(#violet)"/>
     <g fill="#e2e8f0">
       <circle cx="54" cy="44" r="1.2" opacity=".6"><animate attributeName="opacity" values=".2;.8;.2" dur="4s" repeatCount="indefinite"/></circle>
       <circle cx="366" cy="60" r="1.4" opacity=".7"><animate attributeName="opacity" values=".3;.9;.3" dur="3.5s" repeatCount="indefinite"/></circle>
@@ -60,7 +60,8 @@
     <text x="210" y="318" text-anchor="middle" fill="#cbd5e1" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16">Més de 5 anys portant programari</text>
     <text x="210" y="340" text-anchor="middle" fill="#cbd5e1" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16">a producció: web, escriptori, jocs i IA.</text>
     <path d="M90 360 H330" stroke="url(#line)" stroke-width="2"/>
-    <text x="210" y="382" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="12.5" letter-spacing=".5">JavaScript · TypeScript · PHP · React · Laravel</text>
+    <text x="210" y="382" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="12.5" letter-spacing=".5">JavaScript · TypeScript · PHP</text>
+    <text x="210" y="404" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="12.5" letter-spacing=".5">React · Laravel · Three.js</text>
   </g>
-  <rect x=".75" y=".75" width="418.5" height="394.5" rx="21.25" fill="none" stroke="#22d3ee" stroke-opacity=".25" stroke-width="1.5"/>
+  <rect x=".75" y=".75" width="418.5" height="422.5" rx="21.25" fill="none" stroke="#22d3ee" stroke-opacity=".25" stroke-width="1.5"/>
 </svg>

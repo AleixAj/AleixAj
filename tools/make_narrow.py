@@ -21,28 +21,35 @@ from make_sections import (CAREER, CAREER_CA, CAREER_EN, EDUCATION, EDUCATION_CA
 W = 420
 LANGS = ('es', 'en', 'ca')
 
+# Bold text is wider than regular at the same size, so each weight is measured
+# with its own font: measuring a bold job title with the regular one is how a
+# line ends up running off the panel.
+FACES = {'regular': 'C:/Windows/Fonts/segoeui.ttf', 'bold': 'C:/Windows/Fonts/segoeuib.ttf'}
 try:
-    MEASURE = {s: ImageFont.truetype('C:/Windows/Fonts/segoeui.ttf', s) for s in range(12, 23)}
+    MEASURE = {(weight, size): ImageFont.truetype(path, size)
+               for weight, path in FACES.items() for size in range(10, 29)}
 except OSError:
     MEASURE = {}
 
 
-def fits(text, size, limit):
-    font = MEASURE.get(round(size))
-    width = font.getlength(text) * 1.04 if font else len(text) * size * 0.56
+def fits(text, size, limit, weight='regular'):
+    font = MEASURE.get((weight, round(size)))
+    if font:
+        width = font.getlength(text) * 1.04      # a Mac falls back to Helvetica Neue, a bit wider
+    else:
+        width = len(text) * size * (0.60 if weight == 'bold' else 0.56)
     return width <= limit
 
 
-def wrap_to(text, size, limit, max_lines=3):
-    """Break text into lines that each fit inside limit pixels."""
+def wrap_to(text, size, limit, weight='regular'):
+    """Break text into as many lines as it needs. It never drops a word: the
+    panel grows instead, which is better than losing half a job title."""
     lines, cur = [], ''
     for word in text.split():
         trial = f'{cur} {word}'.strip()
-        if cur and not fits(trial, size, limit):
+        if cur and not fits(trial, size, limit, weight):
             lines.append(cur)
             cur = word
-            if len(lines) == max_lines:
-                return lines
         else:
             cur = trial
     if cur:
@@ -87,11 +94,11 @@ def timeline(title, sub, rows):
         dots.append(f'  <circle cx="{rail}" cy="{y + 7}" r="11" fill="{c}" fill-opacity=".15"/>'
                     f'<circle cx="{rail}" cy="{y + 7}" r="5" fill="{c}" stroke="#070B16" stroke-width="2"/>')
         ry = y + 38
-        for line in wrap_to(role, 17, text_w, 2):
+        for line in wrap_to(role, 17, text_w, 'bold'):
             body.append(f'  <text x="{x1}" y="{ry}" font-family="{FONT}" font-size="17" font-weight="700" fill="#FFFFFF">{escape(line)}</text>')
             ry += 22
         body.append(f'  <text x="{x1}" y="{ry}" font-family="{FONT}" font-size="14" font-weight="600" fill="{c}">{escape(place)}</text>')
-        for line in wrap_to(desc, 14, text_w, 3) if desc else []:
+        for line in wrap_to(desc, 14, text_w) if desc else []:
             ry += 20
             body.append(f'  <text x="{x1}" y="{ry}" font-family="{FONT}" font-size="14" fill="#94A3B8">{escape(line)}</text>')
         y = ry + 28
@@ -110,9 +117,13 @@ HEADER = {
 }
 
 
+# the same six the wide header lists, on two lines because they do not fit on one
+TECH_LINES = ('JavaScript · TypeScript · PHP', 'React · Laravel · Three.js')
+
+
 def header(lang):
     hello, line1, line2 = HEADER[lang]
-    h, cx = 396, 210
+    h, cx = 424, 210
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{h}" viewBox="0 0 {W} {h}">
   <defs>
     <radialGradient id="glow" cx="50%" cy="22%" r="62%">
@@ -175,7 +186,8 @@ def header(lang):
     <text x="{cx}" y="318" text-anchor="middle" fill="#cbd5e1" font-family="{FONT}" font-size="16">{escape(line1)}</text>
     <text x="{cx}" y="340" text-anchor="middle" fill="#cbd5e1" font-family="{FONT}" font-size="16">{escape(line2)}</text>
     <path d="M90 360 H330" stroke="url(#line)" stroke-width="2"/>
-    <text x="{cx}" y="382" text-anchor="middle" fill="#94a3b8" font-family="{MONO}" font-size="12.5" letter-spacing=".5">JavaScript · TypeScript · PHP · React · Laravel</text>
+    <text x="{cx}" y="382" text-anchor="middle" fill="#94a3b8" font-family="{MONO}" font-size="12.5" letter-spacing=".5">{TECH_LINES[0]}</text>
+    <text x="{cx}" y="404" text-anchor="middle" fill="#94a3b8" font-family="{MONO}" font-size="12.5" letter-spacing=".5">{TECH_LINES[1]}</text>
   </g>
   <rect x=".75" y=".75" width="{W - 1.5}" height="{h - 1.5}" rx="21.25" fill="none" stroke="#22d3ee" stroke-opacity=".25" stroke-width="1.5"/>
 </svg>
