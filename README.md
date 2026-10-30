@@ -4,10 +4,7 @@
   <a href="README.ca.md"><img src="assets/lang-ca.svg" alt="Veure en català" width="180"></a>
 </p>
 
-<a href="https://aleixaj.com"><picture>
-  <source media="(max-width: 620px)" srcset="assets/narrow/header.svg">
-  <img src="assets/header.svg" alt="Aleix Auqué · Software Developer · Full-stack" width="100%">
-</picture></a>
+<a href="https://aleixaj.com"><picture><source media="(max-width: 620px)" srcset="assets/narrow/header.svg"><img src="assets/header.svg" alt="Aleix Auqué · Software Developer · Full-stack" width="100%"></picture></a>
 
 <p align="center">
   <a href="https://aleixaj.com"><img src="assets/btn-portfolio.svg" alt="Portfolio · aleixaj.com" width="250"></a>
