@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="664" viewBox="0 0 420 664">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0D1424"/><stop offset="1" stop-color="#070B16"/></linearGradient>
+    <radialGradient id="g1" cx="12%" cy="0%" r="60%"><stop offset="0" stop-color="#22D3EE" stop-opacity=".16"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g2" cx="0%" cy="100%" r="55%"><stop offset="0" stop-color="#A855F7" stop-opacity=".12"/><stop offset="1" stop-color="#A855F7" stop-opacity="0"/></radialGradient>
+    <linearGradient id="edge" x1="0" x2="1"><stop offset="0" stop-color="#22D3EE" stop-opacity="0"/><stop offset=".5" stop-color="#22D3EE"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#fff" stroke-opacity=".03"/></pattern>
+    <clipPath id="c"><rect x="1" y="1" width="418" height="662" rx="24"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="420" height="664" fill="url(#bg)"/><rect width="420" height="664" fill="url(#grid)"/>
+    <rect width="420" height="664" fill="url(#g1)"/><rect width="420" height="664" fill="url(#g2)"/>
+    <rect x="120" y="0" width="180" height="2" fill="url(#edge)"/>
+  </g>
+  <rect x="1" y="1" width="418" height="662" rx="24" fill="none" stroke="#22D3EE" stroke-opacity=".22" stroke-width="1.5"/>
+  <text x="26" y="52" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="25" font-weight="700" fill="#FFFFFF">Education</text>
+  <text x="26" y="76" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="12" fill="#94A3B8" letter-spacing="1.2">HIGHER VOCATIONAL DEGREE · BOOTCAMPS</text>
+  <rect x="33" y="104" width="2" height="536" fill="#334155"/>
+  <circle cx="34" cy="111" r="11" fill="#22D3EE" fill-opacity=".15"/><circle cx="34" cy="111" r="5" fill="#22D3EE" stroke="#070B16" stroke-width="2"/>
+  <circle cx="34" cy="219" r="11" fill="#8892BF" fill-opacity=".15"/><circle cx="34" cy="219" r="5" fill="#8892BF" stroke="#070B16" stroke-width="2"/>
+  <circle cx="34" cy="327" r="11" fill="#F97316" fill-opacity=".15"/><circle cx="34" cy="327" r="5" fill="#F97316" stroke="#070B16" stroke-width="2"/>
+  <circle cx="34" cy="435" r="11" fill="#A855F7" fill-opacity=".15"/><circle cx="34" cy="435" r="5" fill="#A855F7" stroke="#070B16" stroke-width="2"/>
+  <circle cx="34" cy="565" r="11" fill="#64748B" fill-opacity=".15"/><circle cx="34" cy="565" r="5" fill="#64748B" stroke="#070B16" stroke-width="2"/>
+  <text x="56" y="116" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="12" font-weight="700" fill="#22D3EE" letter-spacing="1">MAY 2025</text>
+  <text x="56" y="142" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">Frontend Developer Bootcamp</text>
+  <text x="56" y="164" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#22D3EE">Lemoncoders</text>
+  <text x="56" y="184" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="#94A3B8">JavaScript, TypeScript, HTML, CSS and React.</text>
+  <text x="56" y="224" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="12" font-weight="700" fill="#8892BF" letter-spacing="1">JUL – SEP 2019</text>
+  <text x="56" y="250" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">PHP Bootcamp</text>
+  <text x="56" y="272" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#8892BF">Fundació Esplai</text>
+  <text x="56" y="292" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="#94A3B8">275 on-site hours: PHP and Laravel.</text>
+  <text x="56" y="332" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="12" font-weight="700" fill="#F97316" letter-spacing="1">APR – JUN 2019</text>
+  <text x="56" y="358" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">Java Bootcamp</text>
+  <text x="56" y="380" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#F97316">Fundació Esplai</text>
+  <text x="56" y="400" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="#94A3B8">275 on-site hours: Java and SQL.</text>
+  <text x="56" y="440" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="12" font-weight="700" fill="#A855F7" letter-spacing="1">2015 – 2018</text>
+  <text x="56" y="466" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">Higher Technician in Web Application</text>
+  <text x="56" y="488" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">Development (DAW)</text>
+  <text x="56" y="510" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#A855F7">INS Baix Camp</text>
+  <text x="56" y="530" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="#94A3B8">Two-year higher vocational training programme.</text>
+  <text x="56" y="570" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="12" font-weight="700" fill="#64748B" letter-spacing="1">2008 – 2014</text>
+  <text x="56" y="596" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">Secondary Education and Technology</text>
+  <text x="56" y="618" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">Baccalaureate</text>
+  <text x="56" y="640" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#64748B">INS Domènech i Montaner</text>
+</svg>

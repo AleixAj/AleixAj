@@ -57,7 +57,7 @@ PROJECTS = [
     dict(id='waymark', name='Waymark', logo='waymark.png', accent='#38BDF8', kind='FOTOS DE VIAJE EN 3D',
          desc=['Lee el GPS de tus fotos, detecta los viajes solo y', 'los pone en un globo 3D. Sin servidor.'],
          kind_en='TRAVEL PHOTOS IN 3D',
-         desc_en=['Reads the GPS data in your photos, detects your', 'trips on its own and plots them on a 3D globe. No server.'],
+         desc_en=['Reads the GPS in your photos, detects your trips on', 'its own and plots them on a 3D globe. No server.'],
          tags=['SvelteKit', 'TypeScript', 'MapLibre', 'Web Workers'], repo='https://github.com/AleixAj/waymark',
          kind_ca='FOTOS DE VIATGE EN 3D',
          desc_ca=['Llegeix el GPS de les fotos, detecta els viatges', 'tot sol i els situa en un globus 3D. Sense servidor.'],
@@ -102,36 +102,46 @@ def logo_data(name, size=192):
     return 'data:image/png;base64,' + base64.b64encode(b.getvalue()).decode()
 
 
+# the tags are Segoe UI Semibold, so measure the real text with it at each size
 try:
-    # the tags use Segoe UI Semibold at 15px, so measure the real text with it
-    PILL_FONT = ImageFont.truetype('C:/Windows/Fonts/seguisb.ttf', 15)
+    PILL_FONTS = {s: ImageFont.truetype('C:/Windows/Fonts/seguisb.ttf', s) for s in (15, 16, 17)}
 except OSError:
-    PILL_FONT = None
+    PILL_FONTS = {}
 
 
-def pill_w(text):
+def pill_w(text, size=17):
     # 25px from the edge to the text (the dot sits in there) and 12px after it.
     # 4% extra on the text because on a Mac it falls back to Helvetica Neue,
     # which is a bit wider than Segoe UI.
-    if PILL_FONT:
-        text_w = PILL_FONT.getlength(text) * 1.04
+    font = PILL_FONTS.get(size)
+    if font:
+        text_w = font.getlength(text) * 1.04
     else:
         # no Segoe UI on this machine: rough guess per letter (capitals are wider)
-        text_w = sum(9.4 if c.isupper() else 4.2 if c in ' .ijl' else 7.4 for c in text)
+        text_w = sum(9.4 if c.isupper() else 4.2 if c in ' .ijl' else 7.4 for c in text) * size / 15
     return round(25 + text_w + 12)
+
+
+def pill_size(tags, gap=9, start=32, limit=568):
+    """Largest tag size whose row still fits inside the card."""
+    for size in (17, 16, 15):
+        if start + sum(pill_w(t, size) for t in tags) + gap * (len(tags) - 1) <= limit:
+            return size
+    return 15
 
 
 def card(p):
     W, H = 600, 300
     a = p['accent']
+    size = pill_size(p['tags'])
     tags, x = [], 32
     for t in p['tags']:
-        c, w = TECH[t], pill_w(t)
-        tags.append(f'<rect x="{x}" y="236" width="{w}" height="32" rx="16" fill="{c}" fill-opacity=".12" stroke="{c}" stroke-opacity=".45"/>'
+        c, w = TECH[t], pill_w(t, size)
+        tags.append(f'<rect x="{x}" y="234" width="{w}" height="36" rx="18" fill="{c}" fill-opacity=".12" stroke="{c}" stroke-opacity=".45"/>'
                     f'<circle cx="{x + 15}" cy="252" r="3.5" fill="{c}"/>'
-                    f'<text x="{x + 25}" y="257" font-family="{FONT}" font-size="15" font-weight="600" fill="{c}">{escape(t)}</text>')
+                    f'<text x="{x + 25}" y="{258 if size > 15 else 257}" font-family="{FONT}" font-size="{size}" font-weight="600" fill="{c}">{escape(t)}</text>')
         x += w + 9
-    desc = ''.join(f'<text x="32" y="{174 + i * 29}" font-family="{FONT}" font-size="20" fill="#CBD5E1">{escape(l)}</text>' for i, l in enumerate(p['desc']))
+    desc = ''.join(f'<text x="32" y="{173 + i * 30}" font-family="{FONT}" font-size="21" fill="#CBD5E1">{escape(l)}</text>' for i, l in enumerate(p['desc']))
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0D1424"/><stop offset="1" stop-color="#070B16"/></linearGradient>
@@ -151,7 +161,7 @@ def card(p):
   <rect x="28" y="28" width="96" height="96" rx="20" fill="#0B1222" stroke="{a}" stroke-opacity=".35"/>
   <image x="34" y="34" width="84" height="84" href="{logo_data(p['logo'])}" clip-path="url(#logo)"/>
   <text x="148" y="74" font-family="{FONT}" font-size="33" font-weight="700" fill="#FFFFFF" letter-spacing="-.5">{escape(p['name'])}</text>
-  <text x="150" y="108" font-family="{MONO}" font-size="15" font-weight="700" fill="{a}" letter-spacing="1.6">{escape(p['kind'])}</text>
+  <text x="150" y="109" font-family="{MONO}" font-size="18" font-weight="700" fill="{a}" letter-spacing="1.4">{escape(p['kind'])}</text>
   {desc}
   {''.join(tags)}
 </svg>
@@ -177,13 +187,13 @@ def button(p, kind, label, primary):
     fill = f'<rect x="4" y="4" width="{W - 8}" height="{H - 8}" rx="16" fill="url(#f)"/>' if primary else \
            f'<rect x="4.75" y="4.75" width="{W - 9.5}" height="{H - 9.5}" rx="15.25" fill="#0B1222" stroke="{a}" stroke-opacity=".55" stroke-width="1.5"/>'
     col = ink if primary else '#E2E8F0'
-    tw = len(label) * 10.2
+    tw = len(label) * 11.4
     x0 = (W - (24 + 12 + tw)) / 2
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <defs><linearGradient id="f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{a}"/><stop offset="1" stop-color="{a}" stop-opacity=".78"/></linearGradient></defs>
   {fill}
   <g transform="translate({x0:.0f} 20)" fill="none" stroke="{col if not primary else ink}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{ICONS[kind].replace('COL', col if not primary else ink)}</g>
-  <text x="{x0 + 36:.0f}" y="39" font-family="{FONT}" font-size="18" font-weight="700" fill="{col}">{escape(label)}</text>
+  <text x="{x0 + 36:.0f}" y="40" font-family="{FONT}" font-size="20" font-weight="700" fill="{col}">{escape(label)}</text>
 </svg>
 '''
 
@@ -204,12 +214,15 @@ for lang, OUT in (('es', 'assets/cards'), ('en', 'assets/en/cards'), ('ca', 'ass
         for i, (kind, label, _) in enumerate(p['buttons']):
             open(f"{OUT}/{p['id']}-{kind}.svg", 'w', encoding='utf8').write(button(p, kind, label, i == 0))
 
-    # the README block, two projects per row
+    # The README block, two projects per row. The widths are in pixels, not
+    # percentages: GitHub caps an image at the column width but never scales a
+    # smaller one up, so on a phone the cards drop to one per row at 410px
+    # instead of being squeezed to 150px, where nothing inside them can be read.
     rows = []
     for i in range(0, len(projects), 2):
         pair = projects[i:i + 2]
-        cards = '\n  '.join(f'<a href="{p["repo"]}"><img src="{OUT}/{p["id"]}.svg" width="49%" alt="{escape(p["name"])}"></a>' for p in pair)
-        btns = '\n  &nbsp;&nbsp;\n  '.join(' '.join(f'<a href="{u}"><img src="{OUT}/{p["id"]}-{k}.svg" width="23.5%" alt="{escape(p["name"])}: {escape(l)}"></a>' for k, l, u in p['buttons']) for p in pair)
+        cards = '\n  '.join(f'<a href="{p["repo"]}"><img src="{OUT}/{p["id"]}.svg" width="410" alt="{escape(p["name"])}"></a>' for p in pair)
+        btns = '\n  &nbsp;&nbsp;\n  '.join(' '.join(f'<a href="{u}"><img src="{OUT}/{p["id"]}-{k}.svg" width="200" alt="{escape(p["name"])}: {escape(l)}"></a>' for k, l, u in p['buttons']) for p in pair)
         rows.append(f'<p align="center">\n  {cards}\n  <br>\n  {btns}\n</p>')
     open(f'tools/projects.{lang}.html', 'w', encoding='utf8').write('\n\n'.join(rows) + '\n')
 print('ok', len(PROJECTS), 'cards')
