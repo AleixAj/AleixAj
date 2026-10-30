@@ -178,7 +178,16 @@ ICONS = {
 }
 
 
-def button(p, kind, label, primary):
+def button(p, kind, label, primary, tall=False):
+    """The drawing is always 280x64 units wide; `tall` only pads it vertically.
+
+    A tall button is as high as the card it sits next to (205px against the
+    card's 410px), with the button itself centred, so on a wide screen the two
+    buttons line up beside the card instead of hanging off its bottom edge.
+    The phone gets the plain one. Both are served from the same <picture>, and
+    neither carries a width attribute: the browser takes the size from the file,
+    which is the only way one element can be two sizes.
+    """
     W, H = 280, 64
     a = p['accent']
     r, g, b = rgb(a)
@@ -189,11 +198,19 @@ def button(p, kind, label, primary):
     col = ink if primary else '#E2E8F0'
     tw = len(label) * 11.4
     x0 = (W - (24 + 12 + tw)) / 2
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
-  <defs><linearGradient id="f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{a}"/><stop offset="1" stop-color="{a}" stop-opacity=".78"/></linearGradient></defs>
-  {fill}
+    body = f'''{fill}
   <g transform="translate({x0:.0f} 20)" fill="none" stroke="{col if not primary else ink}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{ICONS[kind].replace('COL', col if not primary else ink)}</g>
-  <text x="{x0 + 36:.0f}" y="40" font-family="{FONT}" font-size="20" font-weight="700" fill="{col}">{escape(label)}</text>
+  <text x="{x0 + 36:.0f}" y="40" font-family="{FONT}" font-size="20" font-weight="700" fill="{col}">{escape(label)}</text>'''
+    if tall:
+        # 287 units tall is 205px once 280 units are drawn at 200px, the height
+        # of a 600x300 card shown at 410px
+        vh = 287
+        size, content = f'width="200" height="205" viewBox="0 0 {W} {vh}"', f'<g transform="translate(0 {(vh - H) / 2})">{body}</g>'
+    else:
+        size, content = f'width="200" height="46" viewBox="0 0 {W} {H}"', body
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" {size}>
+  <defs><linearGradient id="f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{a}"/><stop offset="1" stop-color="{a}" stop-opacity=".78"/></linearGradient></defs>
+  {content}
 </svg>
 '''
 
@@ -213,16 +230,25 @@ for lang, OUT in (('es', 'assets/cards'), ('en', 'assets/en/cards'), ('ca', 'ass
         open(f"{OUT}/{p['id']}.svg", 'w', encoding='utf8').write(card(p))
         for i, (kind, label, _) in enumerate(p['buttons']):
             open(f"{OUT}/{p['id']}-{kind}.svg", 'w', encoding='utf8').write(button(p, kind, label, i == 0))
+            open(f"{OUT}/{p['id']}-{kind}-tall.svg", 'w', encoding='utf8').write(button(p, kind, label, i == 0, tall=True))
 
-    # The README block, two projects per row. The widths are in pixels, not
-    # percentages: GitHub caps an image at the column width but never scales a
-    # smaller one up, so on a phone the cards drop to one per row at 410px
-    # instead of being squeezed to 150px, where nothing inside them can be read.
+    # The README block, one project per row: its card, then its own buttons.
+    # Two projects per row would put four buttons under two cards, and a phone,
+    # which stacks everything into one column, then shows the four in a heap
+    # with no way to tell which card each belongs to.
+    #
+    # The widths are in pixels, not percentages: GitHub caps an image at the
+    # column width but never scales a smaller one up, so on a phone the card
+    # drops to 308px and is still readable, instead of being squeezed to 150px.
     rows = []
-    for i in range(0, len(projects), 2):
-        pair = projects[i:i + 2]
-        cards = '\n  '.join(f'<a href="{p["repo"]}"><img src="{OUT}/{p["id"]}.svg" width="410" alt="{escape(p["name"])}"></a>' for p in pair)
-        btns = '\n  &nbsp;&nbsp;\n  '.join(' '.join(f'<a href="{u}"><img src="{OUT}/{p["id"]}-{k}.svg" width="200" alt="{escape(p["name"])}: {escape(l)}"></a>' for k, l, u in p['buttons']) for p in pair)
-        rows.append(f'<p align="center">\n  {cards}\n  <br>\n  {btns}\n</p>')
+    for p in projects:
+        buttons = ' '.join(
+            f'<a href="{u}"><picture><source media="(max-width: 620px)" srcset="{OUT}/{p["id"]}-{k}.svg">'
+            f'<img src="{OUT}/{p["id"]}-{k}-tall.svg" alt="{escape(p["name"])}: {escape(l)}"></picture></a>'
+            for k, l, u in p['buttons'])
+        rows.append(f'<p align="center">\n'
+                    f'  <a href="{p["repo"]}"><img src="{OUT}/{p["id"]}.svg" width="410" alt="{escape(p["name"])}"></a>\n'
+                    f'  {buttons}\n'
+                    f'</p>')
     open(f'tools/projects.{lang}.html', 'w', encoding='utf8').write('\n\n'.join(rows) + '\n')
 print('ok', len(PROJECTS), 'cards')

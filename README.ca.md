@@ -33,29 +33,32 @@ mans d'usuaris reals.
 
 <p align="center">
   <a href="https://github.com/AleixAj/obsidian"><img src="assets/ca/cards/obsidian.svg" width="410" alt="Obsidian"></a>
+  <a href="https://obsidian.aleixaj.com"><picture><source media="(max-width: 620px)" srcset="assets/ca/cards/obsidian-demo.svg"><img src="assets/ca/cards/obsidian-demo-tall.svg" alt="Obsidian: Veure demo"></picture></a> <a href="https://github.com/AleixAj/obsidian"><picture><source media="(max-width: 620px)" srcset="assets/ca/cards/obsidian-code.svg"><img src="assets/ca/cards/obsidian-code-tall.svg" alt="Obsidian: GitHub"></picture></a>
+</p>
+
+<p align="center">
   <a href="https://github.com/AleixAj/orbex-web"><img src="assets/ca/cards/orbex.svg" width="410" alt="Orbex"></a>
-  <br>
-  <a href="https://obsidian.aleixaj.com"><img src="assets/ca/cards/obsidian-demo.svg" width="200" alt="Obsidian: Veure demo"></a> <a href="https://github.com/AleixAj/obsidian"><img src="assets/ca/cards/obsidian-code.svg" width="200" alt="Obsidian: GitHub"></a>
-  &nbsp;&nbsp;
-  <a href="https://play.google.com/store/apps/details?id=com.aleix.orbex"><img src="assets/ca/cards/orbex-play.svg" width="200" alt="Orbex: Google Play"></a> <a href="https://kylen02.itch.io/orbex"><img src="assets/ca/cards/orbex-game.svg" width="200" alt="Orbex: Jugar"></a>
+  <a href="https://play.google.com/store/apps/details?id=com.aleix.orbex"><picture><source media="(max-width: 620px)" srcset="assets/ca/cards/orbex-play.svg"><img src="assets/ca/cards/orbex-play-tall.svg" alt="Orbex: Google Play"></picture></a> <a href="https://kylen02.itch.io/orbex"><picture><source media="(max-width: 620px)" srcset="assets/ca/cards/orbex-game.svg"><img src="assets/ca/cards/orbex-game-tall.svg" alt="Orbex: Jugar"></picture></a>
 </p>
 
 <p align="center">
   <a href="https://github.com/AleixAj/nexus"><img src="assets/ca/cards/nexus.svg" width="410" alt="NEXUS"></a>
+  <a href="https://github.com/AleixAj/nexus/releases/latest/download/NEXUS-Setup.exe"><picture><source media="(max-width: 620px)" srcset="assets/ca/cards/nexus-download.svg"><img src="assets/ca/cards/nexus-download-tall.svg" alt="NEXUS: Descarregar"></picture></a> <a href="https://github.com/AleixAj/nexus"><picture><source media="(max-width: 620px)" srcset="assets/ca/cards/nexus-code.svg"><img src="assets/ca/cards/nexus-code-tall.svg" alt="NEXUS: GitHub"></picture></a>
+</p>
+
+<p align="center">
   <a href="https://github.com/AleixAj/waymark"><img src="assets/ca/cards/waymark.svg" width="410" alt="Waymark"></a>
-  <br>
-  <a href="https://github.com/AleixAj/nexus/releases/latest/download/NEXUS-Setup.exe"><img src="assets/ca/cards/nexus-download.svg" width="200" alt="NEXUS: Descarregar"></a> <a href="https://github.com/AleixAj/nexus"><img src="assets/ca/cards/nexus-code.svg" width="200" alt="NEXUS: GitHub"></a>
-  &nbsp;&nbsp;
-  <a href="https://waymark.aleixaj.com"><img src="assets/ca/cards/waymark-demo.svg" width="200" alt="Waymark: Veure demo"></a> <a href="https://github.com/AleixAj/waymark"><img src="assets/ca/cards/waymark-code.svg" width="200" alt="Waymark: GitHub"></a>
+  <a href="https://waymark.aleixaj.com"><picture><source media="(max-width: 620px)" srcset="assets/ca/cards/waymark-demo.svg"><img src="assets/ca/cards/waymark-demo-tall.svg" alt="Waymark: Veure demo"></picture></a> <a href="https://github.com/AleixAj/waymark"><picture><source media="(max-width: 620px)" srcset="assets/ca/cards/waymark-code.svg"><img src="assets/ca/cards/waymark-code-tall.svg" alt="Waymark: GitHub"></picture></a>
 </p>
 
 <p align="center">
   <a href="https://github.com/AleixAj/nadir"><img src="assets/ca/cards/nadir.svg" width="410" alt="Nadir"></a>
+  <a href="https://nadir.aleixaj.com"><picture><source media="(max-width: 620px)" srcset="assets/ca/cards/nadir-demo.svg"><img src="assets/ca/cards/nadir-demo-tall.svg" alt="Nadir: Veure demo"></picture></a> <a href="https://github.com/AleixAj/nadir"><picture><source media="(max-width: 620px)" srcset="assets/ca/cards/nadir-code.svg"><img src="assets/ca/cards/nadir-code-tall.svg" alt="Nadir: GitHub"></picture></a>
+</p>
+
+<p align="center">
   <a href="https://github.com/AleixAj/kylenchat"><img src="assets/ca/cards/kylenchat.svg" width="410" alt="Kylen Chat"></a>
-  <br>
-  <a href="https://nadir.aleixaj.com"><img src="assets/ca/cards/nadir-demo.svg" width="200" alt="Nadir: Veure demo"></a> <a href="https://github.com/AleixAj/nadir"><img src="assets/ca/cards/nadir-code.svg" width="200" alt="Nadir: GitHub"></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/AleixAj/kylenchat/releases/latest/download/KylenChat-Setup.exe"><img src="assets/ca/cards/kylenchat-download.svg" width="200" alt="Kylen Chat: Descarregar"></a> <a href="https://github.com/AleixAj/kylenchat"><img src="assets/ca/cards/kylenchat-code.svg" width="200" alt="Kylen Chat: GitHub"></a>
+  <a href="https://github.com/AleixAj/kylenchat/releases/latest/download/KylenChat-Setup.exe"><picture><source media="(max-width: 620px)" srcset="assets/ca/cards/kylenchat-download.svg"><img src="assets/ca/cards/kylenchat-download-tall.svg" alt="Kylen Chat: Descarregar"></picture></a> <a href="https://github.com/AleixAj/kylenchat"><picture><source media="(max-width: 620px)" srcset="assets/ca/cards/kylenchat-code.svg"><img src="assets/ca/cards/kylenchat-code-tall.svg" alt="Kylen Chat: GitHub"></picture></a>
 </p>
 
 <p align="center"><sub>Més projectes, amb captures i detalls tècnics, a <a href="https://aleixaj.com"><b>aleixaj.com</b></a></sub></p>
