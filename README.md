@@ -19,9 +19,9 @@ JavaScript**, pero no me limito a ellos: trabajo habitualmente con **TypeScript,
 Node.js y SQL**, y he publicado proyectos con **SvelteKit, Electron, Supabase y Godot**.
 
 En el ámbito profesional he desarrollado soluciones a medida para distribuidoras de electricidad y gas, además
-de aplicaciones internas full-stack. También he gestionado releases y despliegues para clientes como Nestlé,
-CaixaBank o Naturgy. Hoy llevo mis propios productos **de la idea a producción**: una tienda full-stack, un
-juego publicado en Google Play, un asistente de IA para Windows y varias apps web desplegadas.
+de aplicaciones internas full-stack. También he gestionado releases y despliegues de Salesforce para clientes
+como Nestlé, CaixaBank o Naturgy. Hoy llevo mis propios productos **de la idea a producción**: una tienda
+full-stack, un juego publicado en Google Play, un asistente de IA para Windows y varias apps web desplegadas.
 
 Me importa lo que no se ve en una demo: la seguridad, el rendimiento medido, los tests y que el producto aguante
 en manos de usuarios reales.

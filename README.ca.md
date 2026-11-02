@@ -19,9 +19,9 @@ JavaScript**, però no m'hi limito: treballo habitualment amb **TypeScript, Reac
 SQL**, i he publicat projectes amb **SvelteKit, Electron, Supabase i Godot**.
 
 En l'àmbit professional he desenvolupat solucions a mida per a distribuïdores d'electricitat i gas, a més
-d'aplicacions internes full-stack. També he gestionat releases i desplegaments per a clients com Nestlé,
-CaixaBank o Naturgy. Avui porto els meus propis productes **de la idea a producció**: una botiga full-stack, un
-joc publicat a Google Play, un assistent d'IA per a Windows i diverses apps web desplegades.
+d'aplicacions internes full-stack. També he gestionat releases i desplegaments de Salesforce per a clients com
+Nestlé, CaixaBank o Naturgy. Avui porto els meus propis productes **de la idea a producció**: una botiga
+full-stack, un joc publicat a Google Play, un assistent d'IA per a Windows i diverses apps web desplegades.
 
 M'importa el que no es veu en una demo: la seguretat, el rendiment mesurat, els tests i que el producte aguanti
 en mans d'usuaris reals.

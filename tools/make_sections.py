@@ -9,9 +9,32 @@ import re
 import textwrap
 from xml.sax.saxutils import escape
 
+from PIL import ImageFont
+
 FONT = "'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif"
 MONO = "'JetBrains Mono', Consolas, 'SFMono-Regular', monospace"
 CYAN, VIOLET = '#22D3EE', '#A855F7'
+
+# These panels are images: a line that runs past the frame is just gone, and
+# nobody re-reads an SVG to notice. So the text is measured before it is
+# written and a line that does not fit stops the build. The longest job title
+# in English already sits 6px from the edge.
+try:
+    MEASURE = {('regular', 17): ImageFont.truetype('C:/Windows/Fonts/segoeui.ttf', 17),
+               ('semibold', 18): ImageFont.truetype('C:/Windows/Fonts/seguisb.ttf', 18),
+               ('bold', 21): ImageFont.truetype('C:/Windows/Fonts/segoeuib.ttf', 21)}
+except OSError:
+    MEASURE = {}      # no Segoe UI here: trust the author and carry on
+
+
+def check_width(text, weight, size, limit, where):
+    font = MEASURE.get((weight, size))
+    if not font:
+        return text
+    width = font.getlength(text) * 1.04      # a Mac falls back to Helvetica Neue, a bit wider
+    if width > limit:
+        raise ValueError(f'{where}: this line needs {round(width)}px and there are {limit}: {text!r}')
+    return text
 
 
 def icon(slug, x, y, size, color):
@@ -69,6 +92,7 @@ def stack(lang):
             y = 170 + i * 46
             out.append(f'  <rect x="{x + 18}" y="{y}" width="36" height="36" rx="10" fill="{c}" fill-opacity=".14" stroke="{c}" stroke-opacity=".35"/>')
             out.append('  ' + icon(slug, x + 26, y + 8, 20, c))
+            check_width(name, 'semibold', 18, colw - 68 - 16, f'stack/{lang}/{name}')
             out.append(f'  <text x="{x + 68}" y="{y + 24}" font-family="{FONT}" font-size="18" font-weight="600" fill="#E2E8F0">{escape(name)}</text>')
     return frame(W, H, '\n'.join(out))
 
@@ -80,9 +104,9 @@ CAREER = [
     ('AGO 2025 – ENE 2026', 'Desarrollador de software', 'Grup Romeu', '#A855F7',
      'Full-stack con PHP y JavaScript: aplicación interna para gestionar material quirúrgico.'),
     ('MAY 2023 – ABR 2025', 'Desarrollador de software', 'Nemon', '#F97316',
-     'Soluciones a medida para distribuidoras de electricidad y gas sobre un framework propio en PHP.'),
+     'Full-stack con PHP y JavaScript para distribuidoras de electricidad y gas, en un framework propio.'),
     ('NOV 2019 – ABR 2023', 'Release Manager y Desarrollador', 'VIEWNEXT', '#3B82F6',
-     'Releases en grandes empresas: Salesforce (Nestlé), Copado (CaixaBank) y Jenkins (Naturgy).'),
+     'Releases de Salesforce para grandes clientes: Nestlé, CaixaBank y Naturgy, con Copado y Jenkins.'),
     ('FEB – JUN 2018', 'Desarrollador de software (prácticas)', 'C. R. Pantà de Riudecanyes', '#10B981',
      '400 h manteniendo y mejorando software de gestión de usuarios y base de datos.'),
 ]
@@ -97,6 +121,7 @@ EDUCATION = [
 
 def timeline(title, sub, rows):
     W, step, top = 1200, 88, 116
+    room = W - 312 - 48                      # the text starts at 312 and the frame ends at 1200
     # the last entry only needs room for its own lines
     last = 30 + 24 * len(textwrap.wrap(rows[-1][4], 100)[:2])
     H = top + step * (len(rows) - 1) + last + 34
@@ -105,6 +130,13 @@ def timeline(title, sub, rows):
            f'  <rect x="279" y="{top}" width="2" height="{step * (len(rows) - 1) + 20}" fill="#334155"/>']
     for i, (period, role, place, c, desc) in enumerate(rows):
         y = top + i * step
+        check_width(f'{role} · {place}', 'bold', 21, room, f'{title}/{place}')
+        lines = textwrap.wrap(desc, 100)
+        if len(lines) > 2:
+            raise ValueError(f'{title}/{place}: there is room for two lines of description, not '
+                             f'{len(lines)}: {desc!r}')
+        for line in lines:
+            check_width(line, 'regular', 17, room, f'{title}/{place}')
         out.append(f'  <text x="252" y="{y + 18}" text-anchor="end" font-family="{MONO}" font-size="14" font-weight="700" fill="{c}" letter-spacing="1">{escape(period)}</text>')
         out.append(f'  <circle cx="280" cy="{y + 13}" r="13" fill="{c}" fill-opacity=".15"/>')
         out.append(f'  <circle cx="280" cy="{y + 13}" r="6" fill="{c}" stroke="#070B16" stroke-width="2"/>')
@@ -121,9 +153,9 @@ CAREER_EN = [
     ('AUG 2025 – JAN 2026', 'Software Developer', 'Grup Romeu',
      'Full-stack development with PHP and JavaScript: an internal app for managing surgical equipment.'),
     ('MAY 2023 – APR 2025', 'Software Developer', 'Nemon',
-     'Custom solutions for electricity and gas distributors, built on an in-house PHP framework.'),
+     'Full-stack with PHP and JavaScript for electricity and gas distributors, on an in-house framework.'),
     ('NOV 2019 – APR 2023', 'Release Manager and Developer', 'VIEWNEXT',
-     'Release management for large clients: Salesforce (Nestlé), Copado (CaixaBank) and Jenkins (Naturgy).'),
+     'Salesforce releases for large clients: Nestlé, CaixaBank and Naturgy, using Copado and Jenkins.'),
     ('FEB – JUN 2018', 'Software Developer (internship)', 'C. R. Pantà de Riudecanyes',
      '400 hours maintaining and improving user-management and database software.'),
 ]
@@ -141,9 +173,9 @@ CAREER_CA = [
     ('AG. 2025 – GEN. 2026', 'Desenvolupador de programari', 'Grup Romeu',
      'Full-stack amb PHP i JavaScript: aplicació interna per gestionar material quirúrgic.'),
     ('MAIG 2023 – ABR. 2025', 'Desenvolupador de programari', 'Nemon',
-     'Solucions a mida per a distribuïdores d’electricitat i gas sobre un framework propi en PHP.'),
+     'Full-stack amb PHP i JavaScript per a distribuïdores d’electricitat i gas, en un framework propi.'),
     ('NOV. 2019 – ABR. 2023', 'Release Manager i desenvolupador', 'VIEWNEXT',
-     'Releases per a grans empreses: Salesforce (Nestlé), Copado (CaixaBank) i Jenkins (Naturgy).'),
+     'Releases de Salesforce per a grans clients: Nestlé, CaixaBank i Naturgy, amb Copado i Jenkins.'),
     ('FEBR. – JUNY 2018', 'Desenvolupador de programari (pràctiques)', 'C. R. Pantà de Riudecanyes',
      '400 h mantenint i millorant programari de gestió d’usuaris i base de dades.'),
 ]

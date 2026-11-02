@@ -30,12 +30,12 @@
   <circle cx="280" cy="305" r="13" fill="#F97316" fill-opacity=".15"/>
   <circle cx="280" cy="305" r="6" fill="#F97316" stroke="#070B16" stroke-width="2"/>
   <text x="312" y="312" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Software Developer<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#F97316" font-weight="600">Nemon</tspan></text>
-  <text x="312" y="340" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Custom solutions for electricity and gas distributors, built on an in-house PHP framework.</text>
+  <text x="312" y="340" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Full-stack with PHP and JavaScript for electricity and gas distributors, on an in-house framework.</text>
   <text x="252" y="398" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#3B82F6" letter-spacing="1">NOV 2019 – APR 2023</text>
   <circle cx="280" cy="393" r="13" fill="#3B82F6" fill-opacity=".15"/>
   <circle cx="280" cy="393" r="6" fill="#3B82F6" stroke="#070B16" stroke-width="2"/>
   <text x="312" y="400" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Release Manager and Developer<tspan dx="10" fill="#64748B" font-weight="400">·</tspan><tspan dx="10" fill="#3B82F6" font-weight="600">VIEWNEXT</tspan></text>
-  <text x="312" y="428" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Release management for large clients: Salesforce (Nestlé), Copado (CaixaBank) and Jenkins (Naturgy).</text>
+  <text x="312" y="428" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#94A3B8">Salesforce releases for large clients: Nestlé, CaixaBank and Naturgy, using Copado and Jenkins.</text>
   <text x="252" y="486" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'SFMono-Regular', monospace" font-size="14" font-weight="700" fill="#10B981" letter-spacing="1">FEB – JUN 2018</text>
   <circle cx="280" cy="481" r="13" fill="#10B981" fill-opacity=".15"/>
   <circle cx="280" cy="481" r="6" fill="#10B981" stroke="#070B16" stroke-width="2"/>
